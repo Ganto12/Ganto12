@@ -2,14 +2,14 @@
 
 Solo, with parallel agents, I build GPU inference, model training and content factories, plus consumer apps.
 
-- **#1**: GPU MODE prefix-sum board on H100
+- **#1**: globally on the GPU MODE prefix-sum leaderboard, H100
 - **1.86×**: stock vLLM batched throughput, same hardware
 - **35/35**: LeetGPU Hard kernels accepted in a day
-- **~150bn**: tokens run through coding agents (43bn measured, the rest estimated)
+- **155bn**: tokens through coding agents: Codex 112bn + Claude Code 42.9bn
 
 ## Selected work
 
-- [GPU kernels (GPU MODE)](https://github.com/Ganto12/portfolio/blob/main/systems/kernels.md): #1 prefix sum on H100
+- [GPU kernels (GPU MODE)](https://github.com/Ganto12/portfolio/blob/main/systems/kernels.md): #1 globally, prefix sum on H100
 - [vLLM speed-up brief (results, not the recipe)](https://github.com/Ganto12/portfolio/blob/main/systems/vllm_brief.md): Stock vLLM → 1.86× batched
 - [LeetGPU: 35/35 Hard kernels in a day](https://github.com/Ganto12/portfolio/blob/main/systems/leetgpu.md): 35/35 Hard + 4 Medium accepted
 - [Quantization and compression: deploy, validate, measure](https://github.com/Ganto12/portfolio/blob/main/systems/quantization.md): FP8: 50.1 → 27.6 GiB, up to 3.08× decode
