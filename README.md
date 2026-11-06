@@ -5,7 +5,7 @@ Solo, with parallel agents, I build GPU inference, model training and content fa
 - **#1**: globally on the GPU MODE prefix-sum leaderboard, H100
 - **1.86×**: stock vLLM batched throughput, same hardware
 - **35/35**: LeetGPU Hard kernels accepted in a day
-- **155bn**: tokens through coding agents: Codex 112bn + Claude Code 42.9bn
+- **162bn**: tokens through coding agents: Codex 119bn + Claude Code 42.9bn
 
 ## Selected work
 
