@@ -4,7 +4,7 @@ Solo, with parallel agents, I build GPU inference, model training and content fa
 
 - **#1**: in the world on the GPU MODE prefix-sum leaderboard, H100
 - **800**: finished posts in about 9 days from one recipe-driven assembly line
-- **$0.008**: per 3 s generated video clip on my own GPUs, 5×–10× below the model maker's API
+- **27×**: below the model maker's own API on text-to-video, per second of video, on my own GPUs
 - **162bn**: tokens through coding agents: Codex 119bn + Claude Code 42.9bn
 
 ## Map
@@ -16,11 +16,11 @@ Portfolio
 │   ├── Creative combos ............................ k^p combos, every output traceable
 │   ├── Long-form video factory .................... 5 stages, 29 steps, 11,764-clip batches
 │   ├── FactoryOps ................................. Every factory registered, findable and…
-│   ├── MiniMax H3 video factory on my own GPUs .... About $0.008 a clip, 5×–10× below the API
+│   ├── MiniMax H3 video factory on my own GPUs .... 27× below MiniMax's own API
+│   ├── Image-gen onboarding factory ............... Live in Superwall
 │   ├── Movie factory .............................. 193 gates, 4 clean audits
 │   ├── Decisions API gates ........................ About $0.10 per million input tokens
 │   ├── QuantEditor ................................ 121 training videos
-│   ├── Image-gen onboarding factory ............... Live in Superwall
 │   └── Creative abstraction equations ............. k^p factorial design: axes × named levels
 │
 ├── Agent harnesses: Harnesses that keep fleets of agents honest.
@@ -53,8 +53,8 @@ Portfolio
 │   ├── Physics-gap method ......................... 2 hidden bottlenecks: ~20% of each decode step
 │   ├── vLLM speed-up brief ........................ Stock vLLM → 1.86× batched
 │   ├── Quantization and compression ............... FP8: 50.1 → 27.6 GiB, up to 3.08× decode
-│   ├── Local vs API cost arbitrage ................ Video: 116×–250× below API cost (local LTX…
-│   ├── Self-hosted inference stack ................ Video generation 116×–250× cheaper than…
+│   ├── Local vs API cost arbitrage ................ Video per 10 s on my own GPUs: text-to-video…
+│   ├── Self-hosted inference stack ................ Video generation 27× below MiniMax's own API…
 │   ├── Inference eval lab ......................... Stock vLLM → 1.86× batched throughput
 │   ├── LLM fine-tuning & training pipeline ........ 7+ models
 │   ├── ComfyUI creative pipelines &… .............. 60+ worker scripts
@@ -63,7 +63,7 @@ Portfolio
 │
 └── Apps and backend: Products and the plumbing under them.
     ├── Voice SDR .................................. About 49 ms speech-to-text
-    ├── Programmatic paywalls and A/B test flows ... 107 paywall and flow builds
+    ├── Programmatic paywalls ...................... 2 flows head to head; winner at 100% of iOS
     ├── iOS native apps ............................ 6 SwiftUI apps
     ├── Garden ..................................... 35 versions in one day
     └── NocoDB-backed ops subsystems ............... 4 subsystems
@@ -84,7 +84,7 @@ Portfolio
 - [Kernel factory](https://github.com/Ganto12/portfolio/blob/main/systems/kernel_factory.md): GPU MODE ranks 1–8
 - [Physics-gap method: where the time goes, then kill-test the cause](https://github.com/Ganto12/portfolio/blob/main/systems/physics_gap.md): 2 hidden bottlenecks: ~20% of each decode step
 - [Voice SDR (full-duplex)](https://github.com/Ganto12/portfolio/blob/main/apps/voice_sdr.md): About 49 ms speech-to-text
-- [Programmatic paywalls and A/B test flows (Superwall)](https://github.com/Ganto12/portfolio/blob/main/apps/paywall_ab_flows.md): 107 paywall and flow builds
+- [Programmatic paywalls: two iOS onboarding flows and a web-to-app funnel (Superwall)](https://github.com/Ganto12/portfolio/blob/main/apps/paywall_ab_flows.md): 2 flows head to head; winner at 100% of iOS
 - [iOS native apps (SwiftUI)](https://github.com/Ganto12/portfolio/blob/main/apps/ios_native.md): 6 SwiftUI apps
 
 All 47 write-ups: [portfolio](https://github.com/Ganto12/portfolio).
