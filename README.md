@@ -12,11 +12,11 @@ Solo, with parallel agents, I build GPU inference, model training and content fa
 ```text
 Portfolio
 ├── Factories: Pipelines specified as gated graphs.
-│   ├── Movie factory .............................. 193 gates, 4 clean audits
-│   ├── Long-form video factory .................... 5 stages, 29 steps, 11,764-clip batches
-│   ├── Creative matrix ............................ Hook × audience × angle, every output…
 │   ├── Recipe-driven assembly line ................ About 15 recipes, 800 posts in ~9 days
+│   ├── Creative matrix ............................ Hook × audience × angle, every output…
+│   ├── Long-form video factory .................... 5 stages, 29 steps, 11,764-clip batches
 │   ├── MiniMax H3 video factory on my own GPUs .... About $0.008 a clip, 5×–10× below the API
+│   ├── Movie factory .............................. 193 gates, 4 clean audits
 │   ├── Decisions API gates ........................ About $0.10 per million input tokens
 │   ├── QuantEditor ................................ 121 training videos
 │   ├── Image-gen onboarding factory ............... Live in Superwall
@@ -71,9 +71,9 @@ Portfolio
 
 ## Selected work
 
-- [Movie factory: a film as a gated graph](https://github.com/Ganto12/portfolio/blob/main/factories/movie_factory.md): 193 gates, 4 clean audits
-- [Long-form video factory: 5 gated stages, one database row per video](https://github.com/Ganto12/portfolio/blob/main/factories/ready_longs.md): 5 stages, 29 steps, 11,764-clip batches
+- [Recipe-driven assembly line: one fixed recipe per batch shape](https://github.com/Ganto12/portfolio/blob/main/factories/postqueue_prep.md): About 15 recipes, 800 posts in ~9 days
 - [Creative matrix: a fuzzy brief turned into a finite grid of reproducible cells](https://github.com/Ganto12/portfolio/blob/main/factories/marketing_director.md): Hook × audience × angle, every output traceable
+- [Long-form video factory: 5 gated stages, one database row per video](https://github.com/Ganto12/portfolio/blob/main/factories/ready_longs.md): 5 stages, 29 steps, 11,764-clip batches
 - [Agent harnessing & frameworks](https://github.com/Ganto12/portfolio/blob/main/agents/harnessing.md): 280 skills, 110 of them factory-type
 - [Automated quality gates, proven against test cases](https://github.com/Ganto12/portfolio/blob/main/agents/automated_gates.md): 193 gates, each tested against 914 red and 127 green test cases
 - [System evolution: central orchestrator → clean-context agents](https://github.com/Ganto12/portfolio/blob/main/agents/system_evolution.md): 12+ orchestrator scripts → 4 overseers + 11 launchers
