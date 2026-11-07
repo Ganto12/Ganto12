@@ -3,7 +3,7 @@
 Solo, with parallel agents, I build GPU inference, model training and content factories, plus consumer apps.
 
 - **#1**: in the world on the GPU MODE prefix-sum leaderboard, H100
-- **193**: quality gates in the film-factory spec, each proven against known-bad and known-good cases
+- **800**: finished posts in about 9 days from one recipe-driven assembly line
 - **$0.008**: per 3 s generated video clip on my own GPUs, 5×–10× below the model maker's API
 - **162bn**: tokens through coding agents: Codex 119bn + Claude Code 42.9bn
 
@@ -11,7 +11,7 @@ Solo, with parallel agents, I build GPU inference, model training and content fa
 
 ```text
 Portfolio
-├── Factories: Pipelines specified as gated graphs.
+├── Factories: One brief in, thousands of traceable outputs.
 │   ├── Recipe-driven assembly line ................ About 15 recipes, 800 posts in ~9 days
 │   ├── Creative matrix ............................ Hook × audience × angle, every output…
 │   ├── Long-form video factory .................... 5 stages, 29 steps, 11,764-clip batches
