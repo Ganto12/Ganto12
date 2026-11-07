@@ -20,6 +20,7 @@ Portfolio
 │   ├── Image-gen onboarding factory ............... Live in Superwall
 │   ├── Movie factory .............................. 193 gates, 4 clean audits
 │   ├── Decisions API gates ........................ About $0.10 per million input tokens
+│   ├── Training our own model, then letting a… .... Fine-tuned a 70B, then a classifier matched it
 │   ├── QuantEditor ................................ 121 training videos
 │   └── Creative abstraction equations ............. k^p factorial design: axes × named levels
 │
@@ -49,12 +50,12 @@ Portfolio
 │
 ├── Inference and kernels: Faster models on the same GPUs.
 │   ├── GPU kernels ................................ #1 in the world, prefix sum on H100
-│   ├── Kernel factory ............................. GPU MODE ranks 1–8
+│   ├── Kernel factory ............................. #1 of 30 on GPU MODE; top 10 on 4 boards
 │   ├── Physics-gap method ......................... 2 hidden bottlenecks: ~20% of each decode step
 │   ├── vLLM speed-up brief ........................ Stock vLLM → 1.86× batched
 │   ├── Quantization and compression ............... FP8: 50.1 → 27.6 GiB, up to 3.08× decode
-│   ├── Local vs API cost arbitrage ................ Video per 10 s on my own GPUs: text-to-video…
-│   ├── Self-hosted inference stack ................ Video generation 27× below MiniMax's own API…
+│   ├── Local vs API cost arbitrage ................ Per 10 s of video on my own GPUs vs the…
+│   ├── Self-hosted inference stack ................ Video generation 27× below MiniMax's own H3…
 │   ├── Inference eval lab ......................... Stock vLLM → 1.86× batched throughput
 │   ├── LLM fine-tuning & training pipeline ........ 7+ models
 │   ├── ComfyUI creative pipelines &… .............. 60+ worker scripts
@@ -81,12 +82,12 @@ Portfolio
 - [Baked container images and GPU templates](https://github.com/Ganto12/portfolio/blob/main/orchestration/container_templates.md): Box start 24–39 s vs 423–460 s
 - [MLOps container library](https://github.com/Ganto12/portfolio/blob/main/orchestration/mlops.md): 11 Dockerfiles, ~10 image families
 - [GPU kernels (GPU MODE)](https://github.com/Ganto12/portfolio/blob/main/systems/kernels.md): #1 in the world, prefix sum on H100
-- [Kernel factory](https://github.com/Ganto12/portfolio/blob/main/systems/kernel_factory.md): GPU MODE ranks 1–8
+- [Kernel factory](https://github.com/Ganto12/portfolio/blob/main/systems/kernel_factory.md): #1 of 30 on GPU MODE; top 10 on 4 boards
 - [Physics-gap method: where the time goes, then kill-test the cause](https://github.com/Ganto12/portfolio/blob/main/systems/physics_gap.md): 2 hidden bottlenecks: ~20% of each decode step
 - [Voice SDR (full-duplex)](https://github.com/Ganto12/portfolio/blob/main/apps/voice_sdr.md): About 49 ms speech-to-text
 - [Programmatic paywalls: two iOS onboarding flows and a web-to-app funnel (Superwall)](https://github.com/Ganto12/portfolio/blob/main/apps/paywall_ab_flows.md): 2 flows head to head; winner at 100% of iOS
 - [iOS native apps (SwiftUI)](https://github.com/Ganto12/portfolio/blob/main/apps/ios_native.md): 6 SwiftUI apps
 
-All 47 write-ups: [portfolio](https://github.com/Ganto12/portfolio).
+All 48 write-ups: [portfolio](https://github.com/Ganto12/portfolio).
 
 Code lives in private repositories; access on request.
