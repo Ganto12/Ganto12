@@ -29,7 +29,6 @@ Portfolio
 │   ├── System evolution ........................... 12+ orchestrator scripts → 4 overseers + 11…
 │   ├── Agent reporting standard ................... One report contract across dozens of agents
 │   ├── Weekly autopsy & agent debate factory ...... Agents audit and patch their own rules weekly
-│   ├── Codex mission scoring ...................... Every agent mission scored, daily and weekly
 │   ├── Factory UI spec ............................ 8 rules, zero free-text inputs
 │   └── Velocity & scale ........................... ~17,000 commits on GitHub
 │
@@ -88,6 +87,6 @@ Portfolio
 - [Programmatic paywalls and A/B test flows (Superwall)](https://github.com/Ganto12/portfolio/blob/main/apps/paywall_ab_flows.md): 107 paywall and flow builds
 - [iOS native apps (SwiftUI)](https://github.com/Ganto12/portfolio/blob/main/apps/ios_native.md): 6 SwiftUI apps
 
-All 48 write-ups: [portfolio](https://github.com/Ganto12/portfolio).
+All 47 write-ups: [portfolio](https://github.com/Ganto12/portfolio).
 
 Code lives in private repositories; access on request.
