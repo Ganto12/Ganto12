@@ -39,7 +39,7 @@ Portfolio
 │   ├── MLOps container library .................... 11 Dockerfiles, ~10 image families
 │   ├── One pinned runtime per model mode .......... One locked runtime per model mode, picked…
 │   ├── Rented-GPU job runners ..................... Cheapest GPU that fits, kept busy, no idle…
-│   ├── Cheap spot GPUs, zero lost work ............ No lost or repeated jobs when a box is taken
+│   ├── Cheap spot GPUs, zero lost work ............ Idempotent: zero lost or repeated jobs
 │   ├── Vast.ai fleet .............................. 12+ launchers, 6 overseers, nothing bills idle
 │   ├── Linux and remote GPU operations ............ 5 GPU clouds run over SSH
 │   ├── B2 object storage .......................... Vast GPU workers write straight to B2
