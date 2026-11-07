@@ -38,8 +38,8 @@ Portfolio
 │   ├── Baked container images and GPU templates ... Box start 24–39 s vs 423–460 s
 │   ├── MLOps container library .................... 11 Dockerfiles, ~10 image families
 │   ├── One pinned runtime per model mode .......... One locked runtime per model mode, picked…
-│   ├── Rented-GPU job runners ..................... Rent, verify, run, retry, upload in one runner
-│   ├── Cheap spot GPUs, zero lost work ............ Interruptible GPUs, zero lost work
+│   ├── Rented-GPU job runners ..................... Cheapest GPU that fits, kept busy, no idle…
+│   ├── Cheap spot GPUs, zero lost work ............ Cheap spot GPUs, zero lost work
 │   ├── Vast.ai fleet .............................. 12+ launchers, 6 overseers, nothing bills idle
 │   ├── Linux and remote GPU operations ............ 5 GPU clouds run over SSH
 │   ├── B2 object storage .......................... Vast GPU workers write straight to B2
