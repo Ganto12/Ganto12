@@ -61,7 +61,7 @@ Portfolio
 │   ├── Inference eval lab ......................... Stock vLLM → 1.86× batched throughput
 │   ├── LLM fine-tuning & training pipeline ........ 7+ models
 │   ├── ComfyUI creative pipelines &… .............. 60+ worker scripts
-│   └── LeetGPU .................................... 35/35 Hard + 4 Medium accepted
+│   └── LeetGPU .................................... 35/35 Hard in a day
 │
 └── Apps and backend: Products and the plumbing under them.
     ├── Voice SDR .................................. About 49 ms speech-to-text
