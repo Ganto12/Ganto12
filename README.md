@@ -2,7 +2,7 @@
 
 Solo, with parallel agents, I build GPU inference, model training and content factories, plus consumer apps.
 
-- **#1**: in the world on the GPU MODE prefix-sum leaderboard, H100
+- **#1**: reached on the GPU MODE prefix-sum leaderboard, H100 (Oct 2026)
 - **800**: finished posts in about 9 days from one recipe-driven assembly line
 - **27×**: below the model maker's own API on text-to-video, per second of video, on my own GPUs
 - **162bn**: tokens through coding agents: Codex 119bn + Claude Code 42.9bn
@@ -49,8 +49,8 @@ Portfolio
 │   └── Doing more on less ......................... 2 machines to 1 smaller one, same output
 │
 ├── Inference and kernels: Faster models on the same GPUs.
-│   ├── Kernel factory ............................. #1 of 30 on GPU MODE; top 10 on 4 boards
-│   ├── GPU kernels ................................ #1 in the world, prefix sum on H100
+│   ├── Kernel factory ............................. Reached #1 on GPU MODE (Oct 2026)
+│   ├── GPU kernels ................................ Reached #1, prefix sum on H100 (Oct 2026)
 │   ├── Kernel debug factory ....................... 30 failure classes
 │   ├── Debugging for real ......................... 8 real incidents
 │   ├── Lexicon factory ............................ The GPU as a gym and a shooting range
@@ -84,8 +84,8 @@ Portfolio
 - [GPU buying agents: race the cheapest boxes, keep the first that works](https://github.com/Ganto12/portfolio/blob/main/orchestration/gpu_harness.md): Cheapest of 5–10 boxes kept, the rest shut down
 - [Baked container images and GPU templates](https://github.com/Ganto12/portfolio/blob/main/orchestration/container_templates.md): Box start 24–39 s vs 423–460 s
 - [MLOps container library](https://github.com/Ganto12/portfolio/blob/main/orchestration/mlops.md): 11 Dockerfiles, ~10 image families
-- [Kernel factory: the system behind #1 of 30 on GPU MODE](https://github.com/Ganto12/portfolio/blob/main/systems/kernel_factory.md): #1 of 30 on GPU MODE; top 10 on 4 boards
-- [GPU kernels (GPU MODE)](https://github.com/Ganto12/portfolio/blob/main/systems/kernels.md): #1 in the world, prefix sum on H100
+- [Kernel factory: the system that reached #1 on GPU MODE](https://github.com/Ganto12/portfolio/blob/main/systems/kernel_factory.md): Reached #1 on GPU MODE (Oct 2026)
+- [GPU kernels (GPU MODE)](https://github.com/Ganto12/portfolio/blob/main/systems/kernels.md): Reached #1, prefix sum on H100 (Oct 2026)
 - [Kernel debug factory: 50 incidents, one canonical step graph](https://github.com/Ganto12/portfolio/blob/main/systems/debug_hub.md): 30 failure classes
 - [Voice SDR (full-duplex)](https://github.com/Ganto12/portfolio/blob/main/apps/voice_sdr.md): About 49 ms speech-to-text
 - [Programmatic paywalls: two iOS onboarding flows and a web-to-app funnel (Superwall)](https://github.com/Ganto12/portfolio/blob/main/apps/paywall_ab_flows.md): 2 flows head to head; winner at 100% of iOS
