@@ -34,12 +34,12 @@ Portfolio
 │   └── Velocity & scale ........................... ~17,000 commits on GitHub
 │
 ├── MLOps and GPU fleet: Reproducible runtimes and GPU fleets that recover on their own.
-│   ├── GPU buying agents .......................... Up to 10 live candidates per wave
+│   ├── GPU buying agents .......................... Cheapest of 5–10 boxes kept, the rest shut…
 │   ├── Baked container images and GPU templates ... Box start 24–39 s vs 423–460 s
 │   ├── MLOps container library .................... 11 Dockerfiles, ~10 image families
 │   ├── One pinned runtime per model mode .......... One locked runtime per model mode, picked…
 │   ├── Rented-GPU job runners ..................... Cheapest GPU that fits, kept busy, no idle…
-│   ├── Cheap spot GPUs, zero lost work ............ Cheap spot GPUs, zero lost work
+│   ├── Cheap spot GPUs, zero lost work ............ No lost or repeated jobs when a box is taken
 │   ├── Vast.ai fleet .............................. 12+ launchers, 6 overseers, nothing bills idle
 │   ├── Linux and remote GPU operations ............ 5 GPU clouds run over SSH
 │   ├── B2 object storage .......................... Vast GPU workers write straight to B2
@@ -79,7 +79,7 @@ Portfolio
 - [Agent harnessing & frameworks](https://github.com/Ganto12/portfolio/blob/main/agents/harnessing.md): 280 skills, 110 of them factory-type
 - [Automated quality gates, proven against test cases](https://github.com/Ganto12/portfolio/blob/main/agents/automated_gates.md): 193 gates, each tested against 921 red and 128 green test cases
 - [System evolution: central orchestrator → clean-context agents](https://github.com/Ganto12/portfolio/blob/main/agents/system_evolution.md): 12+ orchestrator scripts → 4 overseers + 11 launchers
-- [GPU buying agents: race the cheapest boxes, keep the first that works](https://github.com/Ganto12/portfolio/blob/main/orchestration/gpu_harness.md): Up to 10 live candidates per wave
+- [GPU buying agents: race the cheapest boxes, keep the first that works](https://github.com/Ganto12/portfolio/blob/main/orchestration/gpu_harness.md): Cheapest of 5–10 boxes kept, the rest shut down
 - [Baked container images and GPU templates](https://github.com/Ganto12/portfolio/blob/main/orchestration/container_templates.md): Box start 24–39 s vs 423–460 s
 - [MLOps container library](https://github.com/Ganto12/portfolio/blob/main/orchestration/mlops.md): 11 Dockerfiles, ~10 image families
 - [Kernel factory: the system behind #1 of 30 on GPU MODE](https://github.com/Ganto12/portfolio/blob/main/systems/kernel_factory.md): #1 of 30 on GPU MODE; top 10 on 4 boards
