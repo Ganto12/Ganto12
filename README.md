@@ -26,7 +26,7 @@ Portfolio
 │
 ├── Agent harnesses: Harnesses that keep fleets of agents honest.
 │   ├── Agent harnessing & frameworks .............. 280 skills, 110 of them factory-type
-│   ├── Automated quality gates, proven… ........... 193 gates, each tested against 914 red and…
+│   ├── Automated quality gates, proven… ........... 193 gates, each tested against 921 red and…
 │   ├── System evolution ........................... 12+ orchestrator scripts → 4 overseers + 11…
 │   ├── Agent reporting standard ................... One report contract across dozens of agents
 │   ├── Weekly autopsy & agent debate factory ...... Agents audit and patch their own rules weekly
@@ -77,7 +77,7 @@ Portfolio
 - [Creative combos: a k^p factorial design over named axes](https://github.com/Ganto12/portfolio/blob/main/factories/marketing_director.md): k^p combos, every output traceable
 - [Long-form video factory: 5 gated stages, one database row per video](https://github.com/Ganto12/portfolio/blob/main/factories/ready_longs.md): 5 stages, 29 steps, 11,764-clip batches
 - [Agent harnessing & frameworks](https://github.com/Ganto12/portfolio/blob/main/agents/harnessing.md): 280 skills, 110 of them factory-type
-- [Automated quality gates, proven against test cases](https://github.com/Ganto12/portfolio/blob/main/agents/automated_gates.md): 193 gates, each tested against 914 red and 127 green test cases
+- [Automated quality gates, proven against test cases](https://github.com/Ganto12/portfolio/blob/main/agents/automated_gates.md): 193 gates, each tested against 921 red and 128 green test cases
 - [System evolution: central orchestrator → clean-context agents](https://github.com/Ganto12/portfolio/blob/main/agents/system_evolution.md): 12+ orchestrator scripts → 4 overseers + 11 launchers
 - [GPU fleet agent harness (acquisition + overseers)](https://github.com/Ganto12/portfolio/blob/main/orchestration/gpu_harness.md): Up to 10 live candidates per wave
 - [Baked container images and GPU templates](https://github.com/Ganto12/portfolio/blob/main/orchestration/container_templates.md): Box start 24–39 s vs 423–460 s
