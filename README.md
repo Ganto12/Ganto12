@@ -1,96 +1,135 @@
 # AI systems that ship and scale
 
-Solo, with parallel agents, I build GPU inference, model training and content factories, plus consumer apps.
+Self-taught in computer science and ML. Solo, with parallel agents, I build GPU kernels, inference, model training and a content engine that turns one brief into high-quality video and organic posts, plus consumer apps.
 
-- **#1**: reached on the GPU MODE prefix-sum leaderboard, H100 (Oct 2026)
-- **800**: finished posts in about 9 days from one recipe-driven assembly line
-- **27×**: below the model maker's own API on text-to-video, per second of video, on my own GPUs
-- **162bn**: tokens through coding agents: Codex 119bn + Claude Code 42.9bn
+- **#1**: reached on the GPU MODE prefix-sum leaderboard, H100 (Oct 2026); top 10 on two more boards (#9 matmul, #9 vector sum); 35/35 Hard on LeetGPU
+- **27×**: below MiniMax's own H3 API on text-to-video, per second of video, running MiniMax H3 on my own GPUs
+- **1 engine**: brief → hook-first copy → factorial cells → locked pack → recipe → sub-factory render → gates → high-quality video and organic posts, every output traceable (11,764-clip batch runs)
+- **30,000+ h**: in video games (Rainbow Six Siege) and the gym, reused as mental models to learn GPUs: the lexicon factory
+
+Numbers are measured unless marked "about". Code lives in private repositories; full method, code walkthroughs and receipts are available in a working session.
 
 ## Map
 
 ```text
-Portfolio
-├── Factories: One brief in, thousands of traceable outputs.
-│   ├── Recipe-driven assembly line ................ About 15 recipes, 800 posts in ~9 days
-│   ├── Creative combos ............................ k^p combos, every output traceable
+Write-ups
+├── Content engine: One brief in, high-quality video and organic posts out.
+│   ├── Organic content engine ..................... k^p cells, locked packs, every output traced
 │   ├── Long-form video factory .................... 5 stages, 29 steps, 11,764-clip batches
-│   ├── FactoryOps ................................. Every factory registered, findable and…
-│   ├── MiniMax H3 video factory on my own GPUs .... 27× below MiniMax's own API
-│   ├── Image-gen onboarding factory ............... Live in Superwall
-│   ├── Movie factory .............................. 193 gates, 4 clean audits
-│   ├── Decisions API gates ........................ About $0.10 per million input tokens
-│   ├── Training our own model, then letting a… .... Fine-tuned a 70B, then a classifier matched it
-│   ├── QuantEditor ................................ 121 training videos
-│   └── Creative abstraction equations ............. k^p factorial design: axes × named levels
+│   ├── Movie factory .............................. 193 gates, 34-node graph, 4 clean audits
+│   └── QuantEditor ................................ 121 creator videos; Markovian + goal-directed
+│
+├── GPU kernels: Hand-tuned kernels, ranked on public leaderboards.
+│   ├── GPU kernels ................................ #1 GPU MODE (Oct 2026), #9 ×2, 35/35 LeetGPU…
+│   └── Kernel debugging ........................... 46 of 50 drills diagnosed, 0 false confirms
+│
+├── Inference and training: Faster models and training on the same GPUs.
+│   ├── vLLM speed-ups ............................. 3.08× single-stream, 1.86× at concurrency 32
+│   ├── Physics-gap method ......................... Decode at 72.8% of speed-of-light; ~6 ms of…
+│   ├── Video inference on my own GPUs ............. MiniMax H3 27× below its own API
+│   └── Multi-GPU training and serving ............. 70B LoRA on 2× B200, served TP=2
+│
+├── How I learn: Mapping hard systems onto worlds I already know.
+│   ├── Lexicon factory ............................ GPU as a gym: 114 tricks, 0 world leaks
+│   └── Mental models & insights ................... 25+ models, 7 original insights
 │
 ├── Agent harnesses: Harnesses that keep fleets of agents honest.
-│   ├── Agent harnessing & frameworks .............. 280 skills, 110 of them factory-type
-│   ├── Automated quality gates, proven… ........... 193 gates, each tested against 921 red and…
-│   ├── System evolution ........................... 12+ orchestrator scripts → 4 overseers + 11…
-│   ├── Agent reporting standard ................... One report contract across dozens of agents
-│   ├── Weekly autopsy & agent debate factory ...... Agents audit and patch their own rules weekly
-│   ├── Factory UI spec ............................ 8 rules, zero free-text inputs
-│   └── Velocity & scale ........................... ~17,000 commits on GitHub
+│   ├── Agent harnessing ........................... 280 skills; 12+ orchestrators → 4 overseers…
+│   ├── Automated quality gates, tested like… ...... 71 executable gates, 0 mutation survivors
+│   └── Self-auditing agents ....................... One report contract; weekly self-audit
 │
 ├── MLOps and GPU fleet: Reproducible runtimes and GPU fleets that recover on their own.
-│   ├── GPU buying agents .......................... Cheapest of 5–10 boxes kept, the rest shut…
-│   ├── Baked container images and GPU templates ... Box start 24–39 s vs 423–460 s
-│   ├── MLOps container library .................... 11 Dockerfiles, ~10 image families
-│   ├── One pinned runtime per model mode .......... One locked runtime per model mode, picked…
-│   ├── Rented-GPU job runners ..................... Cheapest GPU that fits, kept busy, no idle…
-│   ├── Cheap spot GPUs, zero lost work ............ Idempotent: zero lost or repeated jobs
-│   ├── Vast.ai fleet .............................. 12+ launchers, 6 overseers, nothing bills idle
-│   ├── Linux and remote GPU operations ............ 5 GPU clouds run over SSH
-│   ├── B2 object storage .......................... Vast GPU workers write straight to B2
-│   ├── Multi-machine production architecture ...... Workstation, VM and GPU clouds; every repo…
-│   ├── Multi-GPU LLM serving and Kubernetes… ...... Simulated: second GPU cut Llama-8B…
-│   ├── Cloud ops and security ..................... Hardened, VPN-only workstation
-│   └── Doing more on less ......................... 2 machines to 1 smaller one, same output
+│   ├── GPU fleet .................................. Up to 10 candidates a wave; nothing bills idle
+│   ├── Rented-GPU job runners ..................... Idempotent: zero lost or repeated jobs
+│   ├── Pinned runtimes and baked images ........... Box start 24–39 s vs 423–460 s
+│   └── Infrastructure and security ................ 5 GPU clouds over SSH; 0 secrets in 129,503…
 │
-├── Inference and kernels: Faster models on the same GPUs.
-│   ├── Kernel factory ............................. Reached #1 on GPU MODE (Oct 2026)
-│   ├── GPU kernels ................................ Reached #1, prefix sum on H100 (Oct 2026)
-│   ├── Kernel debug factory ....................... 30 failure classes
-│   ├── Debugging for real ......................... 8 real incidents
-│   ├── Lexicon factory ............................ The GPU as a gym and a shooting range
-│   ├── Kernel world ............................... A kernel book, a 114-trick arsenal, a…
-│   ├── Physics-gap method ......................... 2 hidden bottlenecks: ~20% of each decode step
-│   ├── vLLM speed-up brief ........................ Stock vLLM → 1.86× batched
-│   ├── Quantization and compression ............... FP8: 50.1 → 27.6 GiB, up to 3.08× decode
-│   ├── Local vs API cost arbitrage ................ Per 10 s of video on my own GPUs vs the…
-│   ├── Self-hosted inference stack ................ Video generation 27× below MiniMax's own H3…
-│   ├── Inference eval lab ......................... Stock vLLM → 1.86× batched throughput
-│   ├── LLM fine-tuning & training pipeline ........ 7+ models
-│   ├── ComfyUI creative pipelines &… .............. 60+ worker scripts
-│   └── LeetGPU .................................... 35/35 Hard in a day
+├── Backend: The plumbing that makes factories reusable.
+│   ├── Factory registry ........................... One registry, 40+ registered factories
+│   └── Decisions API gates ........................ ~$0.0002 a clip; AUC 0.90 vs 0.69 alone
 │
-└── Apps and backend: Products and the plumbing under them.
-    ├── Voice SDR .................................. About 49 ms speech-to-text
-    ├── Programmatic paywalls ...................... 2 flows head to head; winner at 100% of iOS
-    ├── iOS native apps ............................ 6 SwiftUI apps
-    ├── Garden ..................................... 35 versions in one day
-    └── NocoDB-backed ops subsystems ............... 4 subsystems
+└── Apps: Consumer products, shipped.
+    ├── Onboarding and paywalls .................... Winning flow takes 100% of iOS onboarding
+    ├── Voice SDR .................................. ~49 ms STT; 20, 200 and 800 ms reply paths
+    └── iOS native apps ............................ 6 SwiftUI apps, 20 locales, 1 on the App Store
 ```
 
-## Selected work
+## Content engine: One brief in, high-quality video and organic posts out.
 
-- [Recipe-driven assembly line: one fixed recipe per batch shape](https://github.com/Ganto12/portfolio/blob/main/factories/postqueue_prep.md): About 15 recipes, 800 posts in ~9 days
-- [Creative combos: a k^p factorial design over named axes](https://github.com/Ganto12/portfolio/blob/main/factories/marketing_director.md): k^p combos, every output traceable
-- [Long-form video factory: 5 gated stages, one database row per video](https://github.com/Ganto12/portfolio/blob/main/factories/ready_longs.md): 5 stages, 29 steps, 11,764-clip batches
-- [Agent harnessing & frameworks](https://github.com/Ganto12/portfolio/blob/main/agents/harnessing.md): 280 skills, 110 of them factory-type
-- [Automated quality gates, proven against test cases](https://github.com/Ganto12/portfolio/blob/main/agents/automated_gates.md): 193 gates, each tested against 921 red and 128 green test cases
-- [System evolution: central orchestrator → clean-context agents](https://github.com/Ganto12/portfolio/blob/main/agents/system_evolution.md): 12+ orchestrator scripts → 4 overseers + 11 launchers
-- [GPU buying agents: race the cheapest boxes, keep the first that works](https://github.com/Ganto12/portfolio/blob/main/orchestration/gpu_harness.md): Cheapest of 5–10 boxes kept, the rest shut down
-- [Baked container images and GPU templates](https://github.com/Ganto12/portfolio/blob/main/orchestration/container_templates.md): Box start 24–39 s vs 423–460 s
-- [MLOps container library](https://github.com/Ganto12/portfolio/blob/main/orchestration/mlops.md): 11 Dockerfiles, ~10 image families
-- [Kernel factory: the system that reached #1 on GPU MODE](https://github.com/Ganto12/portfolio/blob/main/systems/kernel_factory.md): Reached #1 on GPU MODE (Oct 2026)
-- [GPU kernels (GPU MODE)](https://github.com/Ganto12/portfolio/blob/main/systems/kernels.md): Reached #1, prefix sum on H100 (Oct 2026)
-- [Kernel debug factory: 50 incidents, one canonical step graph](https://github.com/Ganto12/portfolio/blob/main/systems/debug_hub.md): 30 failure classes
-- [Voice SDR (full-duplex)](https://github.com/Ganto12/portfolio/blob/main/apps/voice_sdr.md): About 49 ms speech-to-text
-- [Programmatic paywalls: two iOS onboarding flows and a web-to-app funnel (Superwall)](https://github.com/Ganto12/portfolio/blob/main/apps/paywall_ab_flows.md): 2 flows head to head; winner at 100% of iOS
-- [iOS native apps (SwiftUI)](https://github.com/Ganto12/portfolio/blob/main/apps/ios_native.md): 6 SwiftUI apps
+One engine: brief → factorial combo (k^p over named axes) → fixed recipe → gated render → finished long-form video or organic post. Every stage is gated and recorded as data, so every output traces back to its combo, and a new format is a new recipe or a new set of values, not new code.
 
-All 51 write-ups: [portfolio](https://github.com/Ganto12/portfolio).
+| Write-up | Result |
+|---|---|
+| [Organic content engine: a k^p factorial design with every experiment traceable](engine/kp_content_engine.md) | k^p cells, locked packs, every output traced |
+| [Long-form video factory: 5 gated stages, one database row per video](engine/ready_longs.md) | 5 stages, 29 steps, 11,764-clip batches |
+| [Movie factory: a film as a gated graph](engine/movie_factory.md) | 193 gates, 34-node graph, 4 clean audits |
+| [QuantEditor: Markovian and goal-directed video editing, learned from top creators](engine/quanteditor.md) | 121 creator videos; Markovian + goal-directed |
 
-Code lives in private repositories; access on request.
+## GPU kernels: Hand-tuned kernels, ranked on public leaderboards.
+
+Agents, physics hypotheses and kill-tests run as one loop; the leaderboard decides. Each mechanism is learned first through the lexicon factory.
+
+| Write-up | Result |
+|---|---|
+| [GPU kernels: #1 on GPU MODE, the factory behind it, and 35/35 LeetGPU Hard](kernels/gpu_kernels.md) | #1 GPU MODE (Oct 2026), #9 ×2, 35/35 LeetGPU Hard |
+| [Kernel debugging: a drill factory and the real incidents behind it](kernels/kernel_debugging.md) | 46 of 50 drills diagnosed, 0 false confirms |
+
+## Inference and training: Faster models and training on the same GPUs.
+
+Find the gap to the hardware limit, then pick validated levers: serving, quantization, speculative decoding and evals, each measured against a baseline.
+
+| Write-up | Result |
+|---|---|
+| [vLLM speed-ups: FP8, FP8 KV cache and MTP, picked and validated](inference/vllm_speedups.md) | 3.08× single-stream, 1.86× at concurrency 32 |
+| [Physics-gap method: where the time goes, then kill-test the cause](inference/physics_gap.md) | Decode at 72.8% of speed-of-light; ~6 ms of the MTP step sized |
+| [Video inference on my own GPUs: MiniMax H3 at 27× below its own API](inference/video_inference_cost.md) | MiniMax H3 27× below its own API |
+| [Multi-GPU training and serving: 70B fine-tunes on 2× B200, then letting a classifier win](inference/multi_gpu_training.md) | 70B LoRA on 2× B200, served TP=2 |
+
+## How I learn: Mapping hard systems onto worlds I already know.
+
+Self-taught in computer science and ML. I map each GPU and inference concept onto worlds where I have 30,000+ hours (video games, Rainbow Six Siege, the gym), lock the mapping only once it survives a real kernel or number, and feed it back into the kernel and inference work.
+
+| Write-up | Result |
+|---|---|
+| [Lexicon factory: learning GPUs through worlds I already know, rendered as a 3D kernel world](learning/lexicon_factory.md) | GPU as a gym: 114 tricks, 0 world leaks |
+| [Mental models & insights](learning/mental_models.md) | 25+ models, 7 original insights |
+
+## Agent harnesses: Harnesses that keep fleets of agents honest.
+
+Frameworks that make fleets of agents repeatable, auditable and fast.
+
+| Write-up | Result |
+|---|---|
+| [Agent harnessing: skills, clean-context agents and sustained output](agents/harnessing.md) | 280 skills; 12+ orchestrators → 4 overseers + 11 launchers |
+| [Automated quality gates, tested like code](agents/automated_gates.md) | 71 executable gates, 0 mutation survivors |
+| [Self-auditing agents: one report contract and a weekly autopsy](agents/self_auditing_agents.md) | One report contract; weekly self-audit |
+
+## MLOps and GPU fleet: Reproducible runtimes and GPU fleets that recover on their own.
+
+Pinned images, one runtime per model mode, race launchers and overseers: rent, verify, run, recover and tear down without babysitting.
+
+| Write-up | Result |
+|---|---|
+| [GPU fleet: buying agents that race the cheapest boxes](mlops/gpu_fleet.md) | Up to 10 candidates a wave; nothing bills idle |
+| [Rented-GPU job runners: cheapest boxes, fully used, zero lost work](mlops/job_runners.md) | Idempotent: zero lost or repeated jobs |
+| [Pinned runtimes and baked images](mlops/runtimes_and_images.md) | Box start 24–39 s vs 423–460 s |
+| [Infrastructure and security: workstation, VM and GPU clouds](mlops/infrastructure.md) | 5 GPU clouds over SSH; 0 secrets in 129,503 files |
+
+## Backend: The plumbing that makes factories reusable.
+
+Databases, queues, scrapers and publishing routes that keep everything else moving.
+
+| Write-up | Result |
+|---|---|
+| [Factory registry: every factory a Lego piece, every UI a game](backend/factory_registry.md) | One registry, 40+ registered factories |
+| [Decisions API gates: fast yes/no checks with probabilities](backend/decisions_gates.md) | ~$0.0002 a clip; AUC 0.90 vs 0.69 alone |
+
+## Apps: Consumer products, shipped.
+
+From brand and design to paywall and App Store: things real people used and paid for.
+
+| Write-up | Result |
+|---|---|
+| [Onboarding and paywalls: generated flows tested head to head](apps/onboarding_paywalls.md) | Winning flow takes 100% of iOS onboarding |
+| [Voice SDR (full-duplex)](apps/voice_sdr.md) | ~49 ms STT; 20, 200 and 800 ms reply paths |
+| [iOS native apps (SwiftUI)](apps/ios_native.md) | 6 SwiftUI apps, 20 locales, 1 on the App Store |
