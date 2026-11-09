@@ -1,14 +1,13 @@
-# Physics-gap method: where the time goes, then kill-test the cause
+# Physics-gap method: compare against the theoretical limit, then close the gap
 
-For every serving step, compare measured time to the physics limit, find the biggest gaps, and kill-test the cause before building a fix.
+A very simple framework: work out the theoretical limit for each step from first principles, measure the real time, rank the gaps, and improve against them one by one, kill-testing each suspected cause before building a fix.
 
 ## Results
 
 | Measured result |
 |---|
-| Batch-1 decode at 72.8% of spec-bandwidth speed-of-light in config C3 (15.21 ms ideal vs 20.88 ms measured) |
-| in the MTP step a cuBLAS tile mis-pick costs 1.52 ms and reading the BF16 lm_head 3x costs 4.76 ms (how MTP works) |
-| cold 250k prefill at 39.6% of the physics limit |
+| **In the MTP step:** a cuBLAS tile mis-pick costs 1.52 ms and reading the BF16 lm_head 3x costs 4.76 ms |
+| about 6 ms of a 29 ms step sized for two serving-path fixes |
 
 ## Setup and how it was measured
 
@@ -20,4 +19,4 @@ For every serving step, compare measured time to the physics limit, find the big
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: Inference and training.
+Part of my [GitHub profile](../README.md), chapter: Inference.

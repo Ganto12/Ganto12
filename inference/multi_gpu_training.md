@@ -1,4 +1,4 @@
-# Multi-GPU training and serving: 70B fine-tunes on 2× B200, then letting a classifier win
+# A little model training: 70B LoRA fine-tunes on 2× B200, then letting a classifier win
 
 Fine-tuning up to 70B on multi-GPU boxes, tensor-parallel serving, simulated larger layouts, and the result that a small classifier matched the 70B model on the task.
 
@@ -36,4 +36,4 @@ Fine-tuning up to 70B on multi-GPU boxes, tensor-parallel serving, simulated lar
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: Inference and training.
+Part of my [GitHub profile](../README.md), chapter: Inference.

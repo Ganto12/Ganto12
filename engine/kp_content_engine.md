@@ -1,11 +1,11 @@
-# Organic content engine: a k^p factorial design with every experiment traceable
+# Organic content engine: one end-to-end engine over a Cartesian plane of hypotheses
 
-A first-principles engine for organic content: an open creative space reduced to a finite grid of named axes, every cell run as a reproducible experiment and shipped as a locked pack whose outputs trace back to the cell that made them. Fully automated from brief to scheduled post.
+One end-to-end organic engine: first-principles design of the most pertinent axes, a Cartesian plane of hypotheses, immutable packs, and clean traceability from every output back to the cell that made it. Fully automated from brief to scheduled post.
 
 ## First principles
 
 - **Derived from copywriting, hook first.** The words decide whether anything gets watched, so the copy is designed and locked before a single frame is rendered.
-- **An atomic unit of the axes that matter.** Inspired by video-game character-creation screens: a handful of dials, each with a few named settings, that together define one piece of content. Pick the p axes that carry signal, give each k named levels, and the open space becomes k^p cells.
+- **An atomic unit of the axes that matter.** Inspired by video-game character-creation screens: a handful of dials, each with a few named settings, that together define one piece of content. Design the p most pertinent axes from first principles, give each k named levels, and the open space becomes a Cartesian plane of k^p hypotheses.
 - **Every cell is an experiment.** Re-running a cell gives the same combination, so a result can be credited to the settings that caused it, not to luck.
 
 ## How it is organised
@@ -16,7 +16,7 @@ A Cartesian grid of cells on one side, a tree of sub-factories on the other. Eac
 flowchart LR
     B["Brief"] --> H["Hook-first copy"]
     H --> C["Pick an unused cell<br/>(seeded, no repeats)"]
-    C --> P["Locked pack<br/>copy + cell fixed"]
+    C --> P["Immutable pack<br/>copy + cell fixed"]
     P --> R["Recipe<br/>slots and roles"]
     I["Ingestion bucket<br/>unique source content"] --> F
     R --> F["Sub-factory render"]
@@ -28,7 +28,7 @@ flowchart LR
     D -.-> C
 ```
 
-- **Locked packs:** preview, reviewed checkpoint, then lock. Every piece of copy, plus translations into 10 languages, is fixed before render; the factory never rewrites the words.
+- **Immutable packs:** preview, reviewed checkpoint, then lock. From then on the pack does not change: every piece of copy, plus translations into 10 languages, is fixed before render, and the factory never rewrites the words.
 - **Ingestion bucket:** sub-factories pull unique source content from a shared bucket, so cells differ in material, not only in wording.
 - **Gates:** a prompt-trace audit must pass before anything publishes, and vision gates score every picture and clip (see [Decisions API gates](../backend/decisions_gates.md)).
 - **Hypothesis analysis:** each batch is a pre-flight-checked test of named cells; result data feeds the analysis afterwards.

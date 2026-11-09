@@ -31,4 +31,4 @@ Self-hosted video generation (MiniMax H3 text-to-video, reference-to-video and f
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: Inference and training.
+Part of my [GitHub profile](../README.md), chapter: Inference.

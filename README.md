@@ -1,11 +1,12 @@
 # AI systems that ship and scale
 
-Self-taught in computer science and ML. Solo, with parallel agents, I build GPU kernels, inference, model training and a content engine that turns one brief into high-quality video and organic posts, plus consumer apps.
+**Lexicon factory.** I have put 30,000 to 68,000 hours into chasing mastery across football, the gym and video games, Rainbow Six Siege above all. Those neural pathways are already built, so I reinterpret GPUs through that lens and learn them far faster. [How it works](mental_models/lexicon_factory.md).
 
-- **#1**: reached on the GPU MODE prefix-sum leaderboard, H100 (Oct 2026); top 10 on two more boards (#9 matmul, #9 vector sum); 35/35 Hard on LeetGPU
+Self-taught in computer science and ML. Solo, with parallel agents, I build GPU kernels and the factories and evals around them, an end-to-end organic content engine, agent harnesses and consumer apps, plus a little model training.
+
+- **#1**: reached on the GPU MODE prefix-sum leaderboard, H100 (Oct 2026), with the kernel factory; top 10 on two more boards (#9 matmul, #9 vector sum); 35/35 Hard on LeetGPU
 - **27×**: below MiniMax's own H3 API on text-to-video, per second of video, running MiniMax H3 on my own GPUs
-- **1 engine**: brief → hook-first copy → factorial cells → locked pack → recipe → sub-factory render → gates → high-quality video and organic posts, every output traceable (11,764-clip batch runs)
-- **30,000+ h**: in video games (Rainbow Six Siege) and the gym, reused as mental models to learn GPUs: the lexicon factory
+- **1 engine**: end to end over a Cartesian plane of hypotheses: hook-first copy, immutable packs, recipes, sub-factory render and gates, every output traceable (11,764-clip batch runs)
 
 Numbers are measured unless marked "about". Code lives in private repositories; full method, code walkthroughs and receipts are available in a working session.
 
@@ -13,28 +14,29 @@ Numbers are measured unless marked "about". Code lives in private repositories; 
 
 ```text
 Write-ups
-├── Content engine: One brief in, high-quality video and organic posts out.
-│   ├── Organic content engine ..................... k^p cells, locked packs, every output traced
+├── Content engine: One end-to-end engine over a Cartesian plane of hypotheses.
+│   ├── Organic content engine ..................... k^p hypotheses, immutable packs
 │   ├── Long-form video factory .................... 5 stages, 29 steps, 11,764-clip batches
 │   ├── Movie factory .............................. 193 gates, 34-node graph, 4 clean audits
 │   └── QuantEditor ................................ 121 creator videos; Markovian + goal-directed
 │
-├── GPU kernels: Hand-tuned kernels, ranked on public leaderboards.
-│   ├── GPU kernels ................................ #1 GPU MODE (Oct 2026), #9 ×2, 35/35 LeetGPU…
+├── GPU kernels: A kernel factory, ranked on public leaderboards, and the evals behind it.
+│   ├── Kernel factory ............................. #1 GPU MODE, #9 ×2, 35/35 LeetGPU Hard
+│   ├── Eval factory ............................... 4 verdicts, 23-case self-test
 │   └── Kernel debugging ........................... 46 of 50 drills diagnosed, 0 false confirms
 │
-├── Inference and training: Faster models and training on the same GPUs.
+├── Inference: Faster models on the same GPUs, plus a little training.
 │   ├── vLLM speed-ups ............................. 3.08× single-stream, 1.86× at concurrency 32
-│   ├── Physics-gap method ......................... Decode at 72.8% of speed-of-light; ~6 ms of…
+│   ├── Physics-gap method ......................... Measured vs theoretical limit, gap by gap
 │   ├── Video inference on my own GPUs ............. MiniMax H3 27× below its own API
-│   └── Multi-GPU training and serving ............. 70B LoRA on 2× B200, served TP=2
+│   └── A little model training .................... 70B LoRA on 2× B200, served TP=2
 │
-├── How I learn: Mapping hard systems onto worlds I already know.
-│   ├── Lexicon factory ............................ GPU as a gym: 114 tricks, 0 world leaks
-│   └── Mental models & insights ................... 25+ models, 7 original insights
+├── Mental models: General problem solving across domains, always in pursuit of mastery.
+│   ├── Lexicon factory ............................ GPU as a gym and a range: 114 tricks
+│   └── Mental models .............................. Games, sport, markets and GPUs
 │
 ├── Agent harnesses: Harnesses that keep fleets of agents honest.
-│   ├── Agent harnessing ........................... 280 skills; 12+ orchestrators → 4 overseers…
+│   ├── Agent harnessing ........................... 280 skills, 4 overseers, 11 launchers
 │   ├── Automated quality gates, tested like… ...... 71 executable gates, 0 mutation survivors
 │   └── Self-auditing agents ....................... One report contract; weekly self-audit
 │
@@ -54,45 +56,46 @@ Write-ups
     └── iOS native apps ............................ 6 SwiftUI apps, 20 locales, 1 on the App Store
 ```
 
-## Content engine: One brief in, high-quality video and organic posts out.
+## Content engine: One end-to-end engine over a Cartesian plane of hypotheses.
 
-One engine: brief → factorial combo (k^p over named axes) → fixed recipe → gated render → finished long-form video or organic post. Every stage is gated and recorded as data, so every output traces back to its combo, and a new format is a new recipe or a new set of values, not new code.
+First-principles design of the most pertinent axes turns an open creative space into a Cartesian plane of hypotheses. Each cell ships as an immutable pack through recipes and sub-factories, with clean traceability from every output back to its cell; a new format is a new recipe, not new code.
 
 | Write-up | Result |
 |---|---|
-| [Organic content engine: a k^p factorial design with every experiment traceable](engine/kp_content_engine.md) | k^p cells, locked packs, every output traced |
+| [Organic content engine: one end-to-end engine over a Cartesian plane of hypotheses](engine/kp_content_engine.md) | k^p hypotheses, immutable packs |
 | [Long-form video factory: 5 gated stages, one database row per video](engine/ready_longs.md) | 5 stages, 29 steps, 11,764-clip batches |
 | [Movie factory: a film as a gated graph](engine/movie_factory.md) | 193 gates, 34-node graph, 4 clean audits |
 | [QuantEditor: Markovian and goal-directed video editing, learned from top creators](engine/quanteditor.md) | 121 creator videos; Markovian + goal-directed |
 
-## GPU kernels: Hand-tuned kernels, ranked on public leaderboards.
+## GPU kernels: A kernel factory, ranked on public leaderboards, and the evals behind it.
 
-Agents, physics hypotheses and kill-tests run as one loop; the leaderboard decides. Each mechanism is learned first through the lexicon factory.
+Agents, physics hypotheses and kill-tests run as one loop in the kernel factory, and the leaderboard decides. The eval factory checks that every faster path is still the same model.
 
 | Write-up | Result |
 |---|---|
-| [GPU kernels: #1 on GPU MODE, the factory behind it, and 35/35 LeetGPU Hard](kernels/gpu_kernels.md) | #1 GPU MODE (Oct 2026), #9 ×2, 35/35 LeetGPU Hard |
+| [Kernel factory: #1 on GPU MODE, top 10 on two more boards, 35/35 LeetGPU Hard](kernels/kernel_factory.md) | #1 GPU MODE, #9 ×2, 35/35 LeetGPU Hard |
+| [Eval factory: is a faster path still the same model?](kernels/eval_factory.md) | 4 verdicts, 23-case self-test |
 | [Kernel debugging: a drill factory and the real incidents behind it](kernels/kernel_debugging.md) | 46 of 50 drills diagnosed, 0 false confirms |
 
-## Inference and training: Faster models and training on the same GPUs.
+## Inference: Faster models on the same GPUs, plus a little training.
 
-Find the gap to the hardware limit, then pick validated levers: serving, quantization, speculative decoding and evals, each measured against a baseline.
+Find the gap to the theoretical limit, then pick validated levers: serving, quantization, speculative decoding and evals, each measured against a baseline. Model training is the smallest part of this work.
 
 | Write-up | Result |
 |---|---|
 | [vLLM speed-ups: FP8, FP8 KV cache and MTP, picked and validated](inference/vllm_speedups.md) | 3.08× single-stream, 1.86× at concurrency 32 |
-| [Physics-gap method: where the time goes, then kill-test the cause](inference/physics_gap.md) | Decode at 72.8% of speed-of-light; ~6 ms of the MTP step sized |
+| [Physics-gap method: compare against the theoretical limit, then close the gap](inference/physics_gap.md) | Measured vs theoretical limit, gap by gap |
 | [Video inference on my own GPUs: MiniMax H3 at 27× below its own API](inference/video_inference_cost.md) | MiniMax H3 27× below its own API |
-| [Multi-GPU training and serving: 70B fine-tunes on 2× B200, then letting a classifier win](inference/multi_gpu_training.md) | 70B LoRA on 2× B200, served TP=2 |
+| [A little model training: 70B LoRA fine-tunes on 2× B200, then letting a classifier win](inference/multi_gpu_training.md) | 70B LoRA on 2× B200, served TP=2 |
 
-## How I learn: Mapping hard systems onto worlds I already know.
+## Mental models: General problem solving across domains, always in pursuit of mastery.
 
-Self-taught in computer science and ML. I map each GPU and inference concept onto worlds where I have 30,000+ hours (video games, Rainbow Six Siege, the gym), lock the mapping only once it survives a real kernel or number, and feed it back into the kernel and inference work.
+The lexicon factory is how I learn GPUs; the mental models are how I attack problems in any domain.
 
 | Write-up | Result |
 |---|---|
-| [Lexicon factory: learning GPUs through worlds I already know, rendered as a 3D kernel world](learning/lexicon_factory.md) | GPU as a gym: 114 tricks, 0 world leaks |
-| [Mental models & insights](learning/mental_models.md) | 25+ models, 7 original insights |
+| [Lexicon factory: reinterpreting GPUs through 30,000 to 68,000 hours of chasing mastery](mental_models/lexicon_factory.md) | GPU as a gym and a range: 114 tricks |
+| [Mental models: general problem solving across domains, in pursuit of mastery](mental_models/mental_models.md) | Games, sport, markets and GPUs |
 
 ## Agent harnesses: Harnesses that keep fleets of agents honest.
 
@@ -100,7 +103,7 @@ Frameworks that make fleets of agents repeatable, auditable and fast.
 
 | Write-up | Result |
 |---|---|
-| [Agent harnessing: skills, clean-context agents and sustained output](agents/harnessing.md) | 280 skills; 12+ orchestrators → 4 overseers + 11 launchers |
+| [Agent harnessing: skills, clean-context agents and sustained output](agents/harnessing.md) | 280 skills, 4 overseers, 11 launchers |
 | [Automated quality gates, tested like code](agents/automated_gates.md) | 71 executable gates, 0 mutation survivors |
 | [Self-auditing agents: one report contract and a weekly autopsy](agents/self_auditing_agents.md) | One report contract; weekly self-audit |
 
@@ -117,7 +120,7 @@ Pinned images, one runtime per model mode, race launchers and overseers: rent, v
 
 ## Backend: The plumbing that makes factories reusable.
 
-Databases, queues, scrapers and publishing routes that keep everything else moving.
+A database registry that makes every factory reusable, and API quality gates any factory can call.
 
 | Write-up | Result |
 |---|---|
