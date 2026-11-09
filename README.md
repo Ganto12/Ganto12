@@ -48,10 +48,12 @@ Write-ups
 ├── MLOps and GPU fleet: Reproducible runtimes and GPU fleets that recover on their own.
 │   ├── GPU fleet .................................. Up to 10 candidates a wave; nothing bills idle
 │   ├── Rented-GPU job runners ..................... Idempotent: zero lost or repeated jobs
-│   ├── Pinned runtimes and baked images ........... Box start 24–39 s vs 423–460 s
-│   └── Infrastructure and security ................ 5 GPU clouds; 0 secrets in 129,503 files
+│   └── Pinned runtimes and baked images ........... Box start 24–39 s vs 423–460 s
 │
-├── Backend: The plumbing that makes factories reusable.
+├── Backend and infrastructure: Servers, databases, storage, security and the registry that ties factories together.
+│   ├── Servers and databases ...................... 2 machines → 1 smaller VPS, same output
+│   ├── Object storage ............................. Uploads verified before a job is marked done
+│   ├── Security and cost watch .................... VPN-only; 0 secrets in 129,503 files
 │   ├── Factory registry ........................... One registry, 40+ registered factories
 │   └── Decisions API gates ........................ ~$0.0002 a clip; AUC 0.90 vs 0.69 alone
 │
@@ -116,17 +118,19 @@ Pinned images, one runtime per model mode, race launchers and overseers: rent, v
 
 | Write-up | Result |
 |---|---|
-| [GPU fleet: buying agents that race the cheapest boxes](mlops/gpu_fleet.md) | Up to 10 candidates a wave; nothing bills idle |
+| [GPU fleet: buying agents that race the cheapest boxes, run over SSH](mlops/gpu_fleet.md) | Up to 10 candidates a wave; nothing bills idle |
 | [Rented-GPU job runners: cheapest boxes, fully used, zero lost work](mlops/job_runners.md) | Idempotent: zero lost or repeated jobs |
 | [Pinned runtimes and baked images](mlops/runtimes_and_images.md) | Box start 24–39 s vs 423–460 s |
-| [Infrastructure and security: workstation, VM and GPU clouds](mlops/infrastructure.md) | 5 GPU clouds; 0 secrets in 129,503 files |
 
-## Backend: The plumbing that makes factories reusable.
+## Backend and infrastructure: Servers, databases, storage, security and the registry that ties factories together.
 
-A database registry that makes every factory reusable, and API quality gates any factory can call.
+One hardened VPS runs the agents, the queues and the database; GPU boxes write straight to B2 object storage; every machine is reachable only over a VPN, with watchers on every bill; and one database registry makes every factory reusable.
 
 | Write-up | Result |
 |---|---|
+| [Servers and databases: one hardened VPS for agents, queues and the database](backend/servers_and_databases.md) | 2 machines → 1 smaller VPS, same output |
+| [Object storage: GPU workers write straight to B2](backend/object_storage.md) | Uploads verified before a job is marked done |
+| [Security and cost watch: VPN-only machines, watchers on every bill](backend/security_and_cost_watch.md) | VPN-only; 0 secrets in 129,503 files |
 | [Factory registry: every factory a Lego piece, every UI a game](backend/factory_registry.md) | One registry, 40+ registered factories |
 | [Decisions API gates: fast yes/no checks with probabilities](backend/decisions_gates.md) | ~$0.0002 a clip; AUC 0.90 vs 0.69 alone |
 

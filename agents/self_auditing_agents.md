@@ -6,8 +6,22 @@ Every agent reports in one contract, and a weekly autopsy and debate pipeline au
 
 | Measured result |
 |---|
-| Deployed on Claude Code + Codex, 2 machines, weekly self-audit |
-| 4-stage pipeline |
+| **Agent reporting standard:** Deployed on Claude Code + Codex, 2 machines, weekly self-audit |
+| **Weekly autopsy & agent debate factory:** 4-stage pipeline |
+
+## How it works
+
+### Agent reporting standard
+
+- WHAT CHANGED / WHY / WHAT NEXT; bad news has a mandatory place.
+- One source-of-truth file per workstream; options as Quick vs Optimal with time and tradeoff.
+- Weekly transcript autopsy patches the rules; switchable report modes deployed to every machine.
+- Adapted from a Twitch founder's status-update discipline.
+
+### Weekly autopsy & agent debate factory
+
+- Extract → sanitise → audit for failure patterns → render patches and judge checks.
+- Subagent debate factory: two specialist agents argue for 10 turns to improve hooks and copy.
 
 ## What this covers
 
