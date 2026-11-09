@@ -1,12 +1,20 @@
 # AI systems that ship and scale
 
-Self-taught in computer science and ML. Solo, with parallel agents, I build GPU kernels and the factories and evals around them, an end-to-end organic content engine, agent harnesses and consumer apps, plus a little model training.
+Self-taught in computer science and ML. Solo, with parallel agents, I build an organic content engine, the GPU fleet under it, kernels and the evals around them, agent harnesses and consumer apps, plus a little model training.
 
 - **#1**: reached on the GPU MODE prefix-sum leaderboard, H100 (Oct 2026), with the kernel factory; top 10 on two more boards (#9 matmul, #9 vector sum); 35/35 Hard on LeetGPU
 - **27×**: below MiniMax's own H3 API on text-to-video, per second of video, running MiniMax H3 on my own GPUs
 - **1 engine**: end to end over a Cartesian plane of hypotheses: hook-first copy, immutable packs, recipes, sub-factory render and gates, every output traceable (11,764-clip batch runs)
 
 Numbers are measured unless marked "about". Code lives in private repositories; full method, code walkthroughs and receipts are available in a working session.
+
+## How it fits together
+
+It started with organic content systems on a bootstrapped budget. Midjourney video gave me about 24 videos a day, and only if I sat at the computer all day.
+
+That bottleneck led me to open models, Wan 2.1 and then 2.2, on rented GPUs. Labs and inference providers were far too expensive at that volume, so cost per output became an obsession.
+
+Running the whole system as efficiently as possible forced me to understand workflows that do not work out of the box on every GPU, and each wall pushed me a layer down: the GPU fleet, then serving and quantization, then kernels.
 
 ## Map
 
