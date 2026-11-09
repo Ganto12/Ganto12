@@ -25,6 +25,10 @@ Write-ups
 │   ├── Automated gates, tested like code .......... 71 executable gates, 0 mutation survivors
 │   └── Self-auditing agents ....................... One report contract; weekly self-audit
 │
+├── Mental models: General problem solving across domains, always in pursuit of mastery.
+│   ├── Lexicon factory ............................ GPU as a gym and a range: 114 tricks
+│   └── Mental models .............................. Games, sport, markets and GPUs
+│
 ├── Content engine: One end-to-end engine over a Cartesian plane of hypotheses.
 │   ├── Organic content engine ..................... k^p hypotheses, immutable packs
 │   ├── Long-form video factory .................... 5 stages, 29 steps, 11,764-clip batches
@@ -40,10 +44,6 @@ Write-ups
 │   │   ├── Eval factory ........................... 4 verdicts, 23-case self-test
 │   │   └── Kernel debugging ....................... 46 of 50 drills diagnosed, 0 false confirms
 │   └── A little model training .................... 70B LoRA on 2× B200, served TP=2
-│
-├── Mental models: General problem solving across domains, always in pursuit of mastery.
-│   ├── Lexicon factory ............................ GPU as a gym and a range: 114 tricks
-│   └── Mental models .............................. Games, sport, markets and GPUs
 │
 ├── MLOps and GPU fleet: Reproducible runtimes and GPU fleets that recover on their own.
 │   ├── GPU fleet .................................. Up to 10 candidates a wave; nothing bills idle
@@ -70,6 +70,15 @@ The operating system behind everything below. Agent harnesses are the management
 | [Agent harnessing: skills, clean-context agents and sustained output](agents/harnessing.md) | 280 skills, 4 overseers, 11 launchers |
 | [Automated gates, tested like code](agents/automated_gates.md) | 71 executable gates, 0 mutation survivors |
 | [Self-auditing agents: one report contract and a weekly autopsy](agents/self_auditing_agents.md) | One report contract; weekly self-audit |
+
+## Mental models: General problem solving across domains, always in pursuit of mastery.
+
+The lexicon factory is how I learn GPUs. I put 30,000 to 68,000 hours into chasing mastery across football, the gym and video games (Rainbow Six Siege above all), and I reinterpret GPUs through the neural pathways those hours built, so I learn them far faster. The mental models are how I attack problems in any domain.
+
+| Write-up | Result |
+|---|---|
+| [Lexicon factory: reinterpreting GPUs through 30,000 to 68,000 hours of chasing mastery](mental_models/lexicon_factory.md) | GPU as a gym and a range: 114 tricks |
+| [Mental models: general problem solving across domains, in pursuit of mastery](mental_models/mental_models.md) | Games, sport, markets and GPUs |
 
 ## Content engine: One end-to-end engine over a Cartesian plane of hypotheses.
 
@@ -100,15 +109,6 @@ Find the gap to the theoretical limit, then close it: serving levers first (quan
 | [Kernel factory: #1 on GPU MODE, top 10 on two more boards, 35/35 LeetGPU Hard](kernels/kernel_factory.md) | #1 GPU MODE, #9 ×2, 35/35 LeetGPU Hard |
 | [Eval factory: is a faster path still the same model?](kernels/eval_factory.md) | 4 verdicts, 23-case self-test |
 | [Kernel debugging: a drill factory and the real incidents behind it](kernels/kernel_debugging.md) | 46 of 50 drills diagnosed, 0 false confirms |
-
-## Mental models: General problem solving across domains, always in pursuit of mastery.
-
-The lexicon factory is how I learn GPUs. I put 30,000 to 68,000 hours into chasing mastery across football, the gym and video games (Rainbow Six Siege above all), and I reinterpret GPUs through the neural pathways those hours built, so I learn them far faster. The mental models are how I attack problems in any domain.
-
-| Write-up | Result |
-|---|---|
-| [Lexicon factory: reinterpreting GPUs through 30,000 to 68,000 hours of chasing mastery](mental_models/lexicon_factory.md) | GPU as a gym and a range: 114 tricks |
-| [Mental models: general problem solving across domains, in pursuit of mastery](mental_models/mental_models.md) | Games, sport, markets and GPUs |
 
 ## MLOps and GPU fleet: Reproducible runtimes and GPU fleets that recover on their own.
 
