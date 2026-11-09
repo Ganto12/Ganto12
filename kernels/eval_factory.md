@@ -24,4 +24,4 @@ A locked graph that decides whether a change to a model's inference path (kernel
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: GPU kernels.
+Part of my [GitHub profile](../README.md), chapter: Inference and kernels.

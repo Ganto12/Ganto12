@@ -36,4 +36,4 @@ Fine-tuning up to 70B on multi-GPU boxes, tensor-parallel serving, simulated lar
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: Inference.
+Part of my [GitHub profile](../README.md), chapter: Inference and kernels.

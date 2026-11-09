@@ -34,4 +34,4 @@ Built-in serving levers (FP8 weights, FP8 KV cache, multi-token prediction) pick
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: Inference.
+Part of my [GitHub profile](../README.md), chapter: Inference and kernels.

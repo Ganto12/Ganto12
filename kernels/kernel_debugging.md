@@ -35,4 +35,4 @@ A debug factory with one canonical step graph, seeded from real incidents, plus 
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: GPU kernels.
+Part of my [GitHub profile](../README.md), chapter: Inference and kernels.

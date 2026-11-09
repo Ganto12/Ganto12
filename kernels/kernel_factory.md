@@ -34,4 +34,4 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: GPU kernels.
+Part of my [GitHub profile](../README.md), chapter: Inference and kernels.

@@ -19,4 +19,4 @@ A very simple framework: work out the theoretical limit for each step from first
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: Inference.
+Part of my [GitHub profile](../README.md), chapter: Inference and kernels.

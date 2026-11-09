@@ -31,15 +31,14 @@ Write-ups
 │   ├── Movie factory .............................. 193 gates, 34-node graph, 4 clean audits
 │   └── QuantEditor ................................ 121 creator videos; Markovian + goal-directed
 │
-├── GPU kernels: A kernel factory, ranked on public leaderboards, and the evals behind it.
-│   ├── Kernel factory ............................. #1 GPU MODE, #9 ×2, 35/35 LeetGPU Hard
-│   ├── Eval factory ............................... 4 verdicts, 23-case self-test
-│   └── Kernel debugging ........................... 46 of 50 drills diagnosed, 0 false confirms
-│
-├── Inference: Faster models on the same GPUs, plus a little training.
-│   ├── vLLM speed-ups ............................. 3.08× single-stream, 1.86× at concurrency 32
+├── Inference and kernels: Faster models on the same GPUs, down to hand-tuned kernels.
 │   ├── Physics-gap method ......................... Measured vs theoretical limit, gap by gap
+│   ├── vLLM speed-ups ............................. 3.08× single-stream, 1.86× at concurrency 32
 │   ├── Video inference on my own GPUs ............. 27× cheaper than MiniMax's own H3 API
+│   ├── Kernels
+│   │   ├── Kernel factory ......................... #1 GPU MODE, #9 ×2, 35/35 LeetGPU Hard
+│   │   ├── Eval factory ........................... 4 verdicts, 23-case self-test
+│   │   └── Kernel debugging ....................... 46 of 50 drills diagnosed, 0 false confirms
 │   └── A little model training .................... 70B LoRA on 2× B200, served TP=2
 │
 ├── Mental models: General problem solving across domains, always in pursuit of mastery.
@@ -83,26 +82,24 @@ First-principles design of the most pertinent axes turns an open creative space 
 | [Movie factory: a film as a gated graph](engine/movie_factory.md) | 193 gates, 34-node graph, 4 clean audits |
 | [QuantEditor: Markovian and goal-directed video editing, learned from top creators](engine/quanteditor.md) | 121 creator videos; Markovian + goal-directed |
 
-## GPU kernels: A kernel factory, ranked on public leaderboards, and the evals behind it.
+## Inference and kernels: Faster models on the same GPUs, down to hand-tuned kernels.
 
-Agents, physics hypotheses and kill-tests run as one loop in the kernel factory, and the leaderboard decides. The eval factory checks that every faster path is still the same model.
+Find the gap to the theoretical limit, then close it: serving levers first (quantization, speculative decoding, caching), each measured against a baseline, then hand-tuned kernels when the levers run out. The kernel factory runs agents, physics hypotheses and kill-tests as one loop, and the leaderboard decides; the eval factory checks that every faster path is still the same model. Model training is the smallest part of this work.
+
+| Write-up | Result |
+|---|---|
+| [Physics-gap method: compare against the theoretical limit, then close the gap](inference/physics_gap.md) | Measured vs theoretical limit, gap by gap |
+| [vLLM speed-ups: FP8, FP8 KV cache and MTP, picked and validated](inference/vllm_speedups.md) | 3.08× single-stream, 1.86× at concurrency 32 |
+| [Video inference on my own GPUs: MiniMax H3 at 27× less than its own API](inference/video_inference_cost.md) | 27× cheaper than MiniMax's own H3 API |
+| [A little model training: 70B LoRA fine-tunes on 2× B200, then letting a classifier win](inference/multi_gpu_training.md) | 70B LoRA on 2× B200, served TP=2 |
+
+### Kernels
 
 | Write-up | Result |
 |---|---|
 | [Kernel factory: #1 on GPU MODE, top 10 on two more boards, 35/35 LeetGPU Hard](kernels/kernel_factory.md) | #1 GPU MODE, #9 ×2, 35/35 LeetGPU Hard |
 | [Eval factory: is a faster path still the same model?](kernels/eval_factory.md) | 4 verdicts, 23-case self-test |
 | [Kernel debugging: a drill factory and the real incidents behind it](kernels/kernel_debugging.md) | 46 of 50 drills diagnosed, 0 false confirms |
-
-## Inference: Faster models on the same GPUs, plus a little training.
-
-Find the gap to the theoretical limit, then pick validated levers: serving, quantization, speculative decoding and evals, each measured against a baseline. Model training is the smallest part of this work.
-
-| Write-up | Result |
-|---|---|
-| [vLLM speed-ups: FP8, FP8 KV cache and MTP, picked and validated](inference/vllm_speedups.md) | 3.08× single-stream, 1.86× at concurrency 32 |
-| [Physics-gap method: compare against the theoretical limit, then close the gap](inference/physics_gap.md) | Measured vs theoretical limit, gap by gap |
-| [Video inference on my own GPUs: MiniMax H3 at 27× less than its own API](inference/video_inference_cost.md) | 27× cheaper than MiniMax's own H3 API |
-| [A little model training: 70B LoRA fine-tunes on 2× B200, then letting a classifier win](inference/multi_gpu_training.md) | 70B LoRA on 2× B200, served TP=2 |
 
 ## Mental models: General problem solving across domains, always in pursuit of mastery.
 
