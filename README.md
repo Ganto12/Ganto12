@@ -1,9 +1,9 @@
 # AI systems that ship and scale
 
-Self-taught in computer science and ML. I design systems: solo, I run a company of artificial minds, with agent harnesses as the management layer, factories as the departments and gates as quality control. With it I built an organic content engine, the GPU fleet under it, kernels and the evals around them, and consumer apps. Model training was a small part.
+Self-taught in computer science and ML. I design systems. Solo, I run a company of artificial minds: agent harnesses are the management, factories are the departments, gates are quality control. With it I've built content factories, the GPU fleet and inference under them, kernels, and consumer apps. Model training is a small part.
 
 - **#1** on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), reached with the kernel factory; top 10 on two more boards (#9 matmul, #9 vector sum); 35/35 Hard on LeetGPU
-- **27×** cheaper than MiniMax's own H3 API for text-to-video, per second of video, by running MiniMax H3 on my own GPUs
+- **27–250×** cheaper than frontier APIs at quality my eval gates accept: 27× vs MiniMax H3 text-to-video, 57.5–125× vs standard OpenAI image routes, 15–250× vs Seedance 2 ([write-up](inference/video_inference_cost.md))
 - **1 engine**, end to end, over a Cartesian plane of hypotheses: hook-first copy, immutable packs, recipes, sub-factory renders and gates, with every output traceable (11,764-clip batch runs)
 
 Numbers are measured unless marked "about". Code lives in private repositories; full method, code walkthroughs and receipts are available in a working session.
