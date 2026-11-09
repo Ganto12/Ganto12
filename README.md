@@ -1,10 +1,10 @@
 # AI systems that ship and scale
 
-Self-taught in computer science and ML. Solo, with parallel agents, I build an organic content engine, the GPU fleet under it, kernels and the evals around them, agent harnesses and consumer apps, plus a little model training.
+Self-taught in computer science and ML. Solo, with parallel agents, I built an organic content engine, the GPU fleet under it, kernels and the evals around them, agent harnesses and consumer apps, and did a little model training.
 
-- **#1**: reached on the GPU MODE prefix-sum leaderboard, H100 (Oct 2026), with the kernel factory; top 10 on two more boards (#9 matmul, #9 vector sum); 35/35 Hard on LeetGPU
-- **27×**: below MiniMax's own H3 API on text-to-video, per second of video, running MiniMax H3 on my own GPUs
-- **1 engine**: end to end over a Cartesian plane of hypotheses: hook-first copy, immutable packs, recipes, sub-factory render and gates, every output traceable (11,764-clip batch runs)
+- **#1** on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), reached with the kernel factory; top 10 on two more boards (#9 matmul, #9 vector sum); 35/35 Hard on LeetGPU
+- **27×** cheaper than MiniMax's own H3 API for text-to-video, per second of video, by running MiniMax H3 on my own GPUs
+- **1 engine**, end to end, over a Cartesian plane of hypotheses: hook-first copy, immutable packs, recipes, sub-factory renders and gates, with every output traceable (11,764-clip batch runs)
 
 Numbers are measured unless marked "about". Code lives in private repositories; full method, code walkthroughs and receipts are available in a working session.
 
@@ -12,7 +12,7 @@ Numbers are measured unless marked "about". Code lives in private repositories; 
 
 It started with organic content systems on a bootstrapped budget. Midjourney video gave me about 24 videos a day, and only if I sat at the computer all day.
 
-That bottleneck led me to open models, Wan 2.1 and then 2.2, on rented GPUs. Labs and inference providers were far too expensive at that volume, so cost per output became an obsession.
+That bottleneck led me to open models, Wan 2.1 and then 2.2, on rented GPUs. Labs and inference providers were far too expensive for the volume I needed, so cost per output became an obsession.
 
 Running the whole system as efficiently as possible forced me to understand workflows that do not work out of the box on every GPU, and each wall pushed me a layer down: the GPU fleet, then serving and quantization, then kernels.
 
@@ -34,7 +34,7 @@ Write-ups
 ├── Inference: Faster models on the same GPUs, plus a little training.
 │   ├── vLLM speed-ups ............................. 3.08× single-stream, 1.86× at concurrency 32
 │   ├── Physics-gap method ......................... Measured vs theoretical limit, gap by gap
-│   ├── Video inference on my own GPUs ............. MiniMax H3 27× below its own API
+│   ├── Video inference on my own GPUs ............. 27× cheaper than MiniMax's own H3 API
 │   └── A little model training .................... 70B LoRA on 2× B200, served TP=2
 │
 ├── Mental models: General problem solving across domains, always in pursuit of mastery.
@@ -43,14 +43,14 @@ Write-ups
 │
 ├── Agent harnesses: Harnesses that keep fleets of agents honest.
 │   ├── Agent harnessing ........................... 280 skills, 4 overseers, 11 launchers
-│   ├── Automated quality gates, tested like… ...... 71 executable gates, 0 mutation survivors
+│   ├── Automated gates, tested like code .......... 71 executable gates, 0 mutation survivors
 │   └── Self-auditing agents ....................... One report contract; weekly self-audit
 │
 ├── MLOps and GPU fleet: Reproducible runtimes and GPU fleets that recover on their own.
 │   ├── GPU fleet .................................. Up to 10 candidates a wave; nothing bills idle
 │   ├── Rented-GPU job runners ..................... Idempotent: zero lost or repeated jobs
 │   ├── Pinned runtimes and baked images ........... Box start 24–39 s vs 423–460 s
-│   └── Infrastructure and security ................ 5 GPU clouds over SSH; 0 secrets in 129,503…
+│   └── Infrastructure and security ................ 5 GPU clouds; 0 secrets in 129,503 files
 │
 ├── Backend: The plumbing that makes factories reusable.
 │   ├── Factory registry ........................... One registry, 40+ registered factories
@@ -91,12 +91,12 @@ Find the gap to the theoretical limit, then pick validated levers: serving, quan
 |---|---|
 | [vLLM speed-ups: FP8, FP8 KV cache and MTP, picked and validated](inference/vllm_speedups.md) | 3.08× single-stream, 1.86× at concurrency 32 |
 | [Physics-gap method: compare against the theoretical limit, then close the gap](inference/physics_gap.md) | Measured vs theoretical limit, gap by gap |
-| [Video inference on my own GPUs: MiniMax H3 at 27× below its own API](inference/video_inference_cost.md) | MiniMax H3 27× below its own API |
+| [Video inference on my own GPUs: MiniMax H3 at 27× less than its own API](inference/video_inference_cost.md) | 27× cheaper than MiniMax's own H3 API |
 | [A little model training: 70B LoRA fine-tunes on 2× B200, then letting a classifier win](inference/multi_gpu_training.md) | 70B LoRA on 2× B200, served TP=2 |
 
 ## Mental models: General problem solving across domains, always in pursuit of mastery.
 
-The lexicon factory is how I learn GPUs: 30,000 to 68,000 hours chasing mastery across football, the gym and video games (Rainbow Six Siege above all) built neural pathways I now reinterpret GPUs through, to learn them far faster. The mental models are how I attack problems in any domain.
+The lexicon factory is how I learn GPUs. I put 30,000 to 68,000 hours into chasing mastery across football, the gym and video games (Rainbow Six Siege above all), and I reinterpret GPUs through the neural pathways those hours built, so I learn them far faster. The mental models are how I attack problems in any domain.
 
 | Write-up | Result |
 |---|---|
@@ -110,7 +110,7 @@ Frameworks that make fleets of agents repeatable, auditable and fast.
 | Write-up | Result |
 |---|---|
 | [Agent harnessing: skills, clean-context agents and sustained output](agents/harnessing.md) | 280 skills, 4 overseers, 11 launchers |
-| [Automated quality gates, tested like code](agents/automated_gates.md) | 71 executable gates, 0 mutation survivors |
+| [Automated gates, tested like code](agents/automated_gates.md) | 71 executable gates, 0 mutation survivors |
 | [Self-auditing agents: one report contract and a weekly autopsy](agents/self_auditing_agents.md) | One report contract; weekly self-audit |
 
 ## MLOps and GPU fleet: Reproducible runtimes and GPU fleets that recover on their own.
@@ -122,7 +122,7 @@ Pinned images, one runtime per model mode, race launchers and overseers: rent, v
 | [GPU fleet: buying agents that race the cheapest boxes](mlops/gpu_fleet.md) | Up to 10 candidates a wave; nothing bills idle |
 | [Rented-GPU job runners: cheapest boxes, fully used, zero lost work](mlops/job_runners.md) | Idempotent: zero lost or repeated jobs |
 | [Pinned runtimes and baked images](mlops/runtimes_and_images.md) | Box start 24–39 s vs 423–460 s |
-| [Infrastructure and security: workstation, VM and GPU clouds](mlops/infrastructure.md) | 5 GPU clouds over SSH; 0 secrets in 129,503 files |
+| [Infrastructure and security: workstation, VM and GPU clouds](mlops/infrastructure.md) | 5 GPU clouds; 0 secrets in 129,503 files |
 
 ## Backend: The plumbing that makes factories reusable.
 

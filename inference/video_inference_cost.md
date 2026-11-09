@@ -1,4 +1,4 @@
-# Video inference on my own GPUs: MiniMax H3 at 27× below its own API
+# Video inference on my own GPUs: MiniMax H3 at 27× less than its own API
 
 Self-hosted video generation (MiniMax H3 text-to-video, reference-to-video and first/last-frame), each mode a locked runtime, priced per second of video against the model maker's API.
 

@@ -1,6 +1,6 @@
 # Kernel factory: #1 on GPU MODE, top 10 on two more boards, 35/35 LeetGPU Hard
 
-Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and kill-tests in one loop): reached #1 on the GPU MODE prefix-sum board (H100, Oct 2026), top 10 on two more boards, 35/35 Hard on LeetGPU in a day.
+Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and kill-tests in one loop). They reached #1 on the GPU MODE prefix-sum board (H100, Oct 2026) and the top 10 on two more boards, and cleared 35/35 Hard on LeetGPU in a day.
 
 ## Results
 

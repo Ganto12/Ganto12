@@ -1,4 +1,4 @@
-# Automated quality gates, tested like code
+# Automated gates, tested like code
 
 A validator that runs every executable gate against known-bad (red) and known-good (green) fixtures, plus a mutation self-test, so each gate is tested before it guards real work.
 

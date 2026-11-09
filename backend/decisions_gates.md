@@ -1,6 +1,6 @@
 # Decisions API gates: fast yes/no checks with probabilities
 
-The Decisions API as a programmatic quality agent: yes/no questions about a picture or clip, a probability back, and thresholds that decide. See the Vision QA and Clip QA agents.
+The Decisions API as a programmatic quality agent: yes/no questions about a picture or clip, a probability back, and thresholds that decide.
 
 ## Results
 
