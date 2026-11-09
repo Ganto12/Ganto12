@@ -1,6 +1,6 @@
 # Agent harnessing: skills, clean-context agents and sustained output
 
-How fleets of coding agents are run: one skill per job, clean-context agents instead of a central orchestrator, and the output that came from it.
+How fleets of coding agents are run: one skill per job, clean-context agents instead of a central orchestrator, shortest lossless integration for every new module or adapter (the smallest change that plugs it in, with existing gates passing before and after), and the output that came from it.
 
 ## Results
 
@@ -17,7 +17,7 @@ How fleets of coding agents are run: one skill per job, clean-context agents ins
 
 ## What this covers
 
-- **Agent harnessing & frameworks**: How I run many agents in parallel without losing control.
+- **Agent harnessing & frameworks**: How I run many agents in parallel without losing control, and add every new module or adapter by shortest lossless integration.
 - **System evolution: central orchestrator → clean-context agents**: How my GPU and batch systems got simpler and more reliable as the agents improved.
 - **Velocity & scale**: Consistent, aggressive output over time, measured from my GitHub profile and local logs.
 

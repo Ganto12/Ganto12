@@ -1,7 +1,5 @@
 # AI systems that ship and scale
 
-**Lexicon factory.** I have put 30,000 to 68,000 hours into chasing mastery across football, the gym and video games, Rainbow Six Siege above all. Those neural pathways are already built, so I reinterpret GPUs through that lens and learn them far faster. [How it works](mental_models/lexicon_factory.md).
-
 Self-taught in computer science and ML. Solo, with parallel agents, I build GPU kernels and the factories and evals around them, an end-to-end organic content engine, agent harnesses and consumer apps, plus a little model training.
 
 - **#1**: reached on the GPU MODE prefix-sum leaderboard, H100 (Oct 2026), with the kernel factory; top 10 on two more boards (#9 matmul, #9 vector sum); 35/35 Hard on LeetGPU
@@ -90,7 +88,7 @@ Find the gap to the theoretical limit, then pick validated levers: serving, quan
 
 ## Mental models: General problem solving across domains, always in pursuit of mastery.
 
-The lexicon factory is how I learn GPUs; the mental models are how I attack problems in any domain.
+The lexicon factory is how I learn GPUs: 30,000 to 68,000 hours chasing mastery across football, the gym and video games (Rainbow Six Siege above all) built neural pathways I now reinterpret GPUs through, to learn them far faster. The mental models are how I attack problems in any domain.
 
 | Write-up | Result |
 |---|---|
