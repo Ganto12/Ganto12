@@ -11,4 +11,4 @@ A validator that runs every executable gate against known-bad (red) and known-go
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: Agent harnesses.
+Part of my [GitHub profile](../README.md), chapter: System design.

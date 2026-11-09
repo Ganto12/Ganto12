@@ -1,6 +1,6 @@
 # AI systems that ship and scale
 
-Self-taught in computer science and ML. Solo, with parallel agents, I built an organic content engine, the GPU fleet under it, kernels and the evals around them, agent harnesses and consumer apps, and did a little model training.
+Self-taught in computer science and ML. I design systems: solo, I run a company of artificial minds, with agent harnesses as the management layer, factories as the departments and gates as quality control. With it I built an organic content engine, the GPU fleet under it, kernels and the evals around them, and consumer apps. Model training was a small part.
 
 - **#1** on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), reached with the kernel factory; top 10 on two more boards (#9 matmul, #9 vector sum); 35/35 Hard on LeetGPU
 - **27×** cheaper than MiniMax's own H3 API for text-to-video, per second of video, by running MiniMax H3 on my own GPUs
@@ -20,6 +20,11 @@ Running the whole system as efficiently as possible forced me to understand work
 
 ```text
 Write-ups
+├── System design: Running a company of artificial minds.
+│   ├── Agent harnessing ........................... 280 skills, 4 overseers, 11 launchers
+│   ├── Automated gates, tested like code .......... 71 executable gates, 0 mutation survivors
+│   └── Self-auditing agents ....................... One report contract; weekly self-audit
+│
 ├── Content engine: One end-to-end engine over a Cartesian plane of hypotheses.
 │   ├── Organic content engine ..................... k^p hypotheses, immutable packs
 │   ├── Long-form video factory .................... 5 stages, 29 steps, 11,764-clip batches
@@ -41,11 +46,6 @@ Write-ups
 │   ├── Lexicon factory ............................ GPU as a gym and a range: 114 tricks
 │   └── Mental models .............................. Games, sport, markets and GPUs
 │
-├── Agent harnesses: Harnesses that keep fleets of agents honest.
-│   ├── Agent harnessing ........................... 280 skills, 4 overseers, 11 launchers
-│   ├── Automated gates, tested like code .......... 71 executable gates, 0 mutation survivors
-│   └── Self-auditing agents ....................... One report contract; weekly self-audit
-│
 ├── MLOps and GPU fleet: Reproducible runtimes and GPU fleets that recover on their own.
 │   ├── GPU fleet .................................. Up to 10 candidates a wave; nothing bills idle
 │   ├── Rented-GPU job runners ..................... Idempotent: zero lost or repeated jobs
@@ -61,6 +61,16 @@ Write-ups
     ├── Voice SDR .................................. ~49 ms STT; 20, 200 and 800 ms reply paths
     └── iOS native apps ............................ 6 SwiftUI apps, 20 locales, 1 on the App Store
 ```
+
+## System design: Running a company of artificial minds.
+
+The operating system behind everything below. Agent harnesses are the management layer: one skill per job, clean-context agents, one report contract and a weekly autopsy. Factories are the departments, each with one canonical way to run, registered in the [factory registry](backend/factory_registry.md). Gates are quality control, tested like code.
+
+| Write-up | Result |
+|---|---|
+| [Agent harnessing: skills, clean-context agents and sustained output](agents/harnessing.md) | 280 skills, 4 overseers, 11 launchers |
+| [Automated gates, tested like code](agents/automated_gates.md) | 71 executable gates, 0 mutation survivors |
+| [Self-auditing agents: one report contract and a weekly autopsy](agents/self_auditing_agents.md) | One report contract; weekly self-audit |
 
 ## Content engine: One end-to-end engine over a Cartesian plane of hypotheses.
 
@@ -102,16 +112,6 @@ The lexicon factory is how I learn GPUs. I put 30,000 to 68,000 hours into chasi
 |---|---|
 | [Lexicon factory: reinterpreting GPUs through 30,000 to 68,000 hours of chasing mastery](mental_models/lexicon_factory.md) | GPU as a gym and a range: 114 tricks |
 | [Mental models: general problem solving across domains, in pursuit of mastery](mental_models/mental_models.md) | Games, sport, markets and GPUs |
-
-## Agent harnesses: Harnesses that keep fleets of agents honest.
-
-Frameworks that make fleets of agents repeatable, auditable and fast.
-
-| Write-up | Result |
-|---|---|
-| [Agent harnessing: skills, clean-context agents and sustained output](agents/harnessing.md) | 280 skills, 4 overseers, 11 launchers |
-| [Automated gates, tested like code](agents/automated_gates.md) | 71 executable gates, 0 mutation survivors |
-| [Self-auditing agents: one report contract and a weekly autopsy](agents/self_auditing_agents.md) | One report contract; weekly self-audit |
 
 ## MLOps and GPU fleet: Reproducible runtimes and GPU fleets that recover on their own.
 

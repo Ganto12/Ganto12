@@ -16,4 +16,4 @@ Every agent reports in one contract, and a weekly autopsy and debate pipeline au
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: Agent harnesses.
+Part of my [GitHub profile](../README.md), chapter: System design.

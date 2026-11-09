@@ -23,4 +23,4 @@ How fleets of coding agents are run: one skill per job, clean-context agents ins
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: Agent harnesses.
+Part of my [GitHub profile](../README.md), chapter: System design.
