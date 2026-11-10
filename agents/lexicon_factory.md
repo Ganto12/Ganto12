@@ -1,12 +1,12 @@
-# Lexicon factory: canonical words and 3D scenes that translate any concept into worlds I already know
+# Lexicon factory: an agent harness that maps new technical concepts onto known domains, gated against real numbers
 
-A factory that converts a new concept or topic into the world models I built over 30,000 to 68,000 hours of chasing mastery (football, the gym, video games, Rainbow Six Siege above all). It produces two things: canonical words, a locked lexicon where each concept has one agreed name in those worlds, and canonical scenes, interactive 3D visualisations that act the concept out. New ideas land on old, well-worn neural pathways, so I learn them far faster. GPUs and inference were the first domain.
+An agent harness that maps a new technical concept onto domains I already know and produces two things: locked canonical words (one name per concept) and canonical 3D scenes that act the concept out. Every mapping passes a 4-step gate (propose, test against a real kernel or number, lock, render). GPUs and inference were the first domain.
 
 ## What it makes
 
 - **Canonical words.** One canon sheet, the single source of truth. Every concept gets one locked name in each of two worlds, a gym franchise and a Siege range. Examples: GPU = gym or base; SM = rack or firing lane; HBM = plate factory or armoury; KV cache = the customer's training log or the intel file; prefill = the mission briefing; decode = one rep (or shot) per round; warp = a line of 32 identical specialists moving on one call.
 - **Canonical scenes.** Interactive 3D visualisations built only from locked words: a scene acts the concept out step by step, with live numbers where a real kernel or model exists. Today: the Kernel Lexicon, a 114-trick arsenal, the memory hierarchy, kernel replays and multi-GPU serving.
-- **Together.** The word gives a concept a handle; the scene shows it moving. Reading the word recalls the scene, and the scene already sits on a pathway from thousands of hours in those worlds.
+- **Together.** The word gives a concept a handle; the scene shows it moving. Reading the word recalls the scene.
 
 ## How a concept goes through it
 
@@ -27,14 +27,9 @@ A factory that converts a new concept or topic into the world models I built ove
 
 ### Lexicon factory
 
-- The vague ask behind it: with no formal computer science training, how do you get your head around what is happening inside a GPU? I mapped it onto the two worlds where I have the most hours, the gym and a video game, so each new concept lands on an existing pathway. Stacked domains multiply rather than add (a Lollapalooza effect, the inverse of NVLink scaling): two known worlds gave me far more than double the grip on a concept that started out vague.
-- Speed of uptake: with this method I got the conceptual picture of ML, the visual intuition of how the pieces fit, in about a week, on top of a year of deploying models in my own pipelines without fully understanding every part.
-- Why the pools transfer: staying near the top of Siege across seasons and metas is a proxy for how trading alpha works (an edge appears, spreads, decays, and the next needs a new way of playing); football shows the same pattern in tactics (Guardiola's positional play, Mourinho's low block and counter). The same patterns recur across domains.
-- Character creators: years of video-game character creators, where every face and body feature is a slider from 0 to 1 and the sliders combine, built an intuition for design spaces: many continuous dials, each with a range, all interacting. It maps straight onto full-factorial experiment design (every combination of factors and levels), onto a model's hidden dimensions as dials, and onto attention, which the lexicon already acts out as the character creator.
 - The canon sheet is the single source of truth for how GPU and inference concepts map to two frames, a gym franchise and a Siege range. Examples: GPU = gym or base; SM = rack or firing lane; HBM = plate factory or armoury; KV cache = the customer's training log (the scroll) or the intel file; prefill = signing the whole customer up at once or the mission briefing; decode = one rep (or shot) per round; warp = a line of 32 identical specialists moving on one call.
 - Factory rules: proposals are kept separate from locked words; a mapping is locked only after it survives a real kernel or number; builders must use locked words; the canon sheet outranks any single page. Wrong analogies were rewritten when the numbers broke them.
 - Output: interactive 3D teaching pages (Kernel Lexicon, arsenal, memory hierarchy, multi-GPU) built from the canon.
-- How it fed the self-taught inference side: each mechanism (memory hierarchy, warps, prefill, decode, KV cache, collectives) was learned through a mapping and then tested against measured results. The benchmarks (GPU MODE #1 in Oct 2026, vLLM 1.86×, LeetGPU 35/35 Hard) are measured separately and stand on their own.
 
 ### Kernel world
 
@@ -51,9 +46,9 @@ A factory that converts a new concept or topic into the world models I built ove
 
 ## What this covers
 
-- **Lexicon factory: learning hard systems through worlds I already know (the GPU as a gym and a shooting range)**: I learn complex systems by mapping them onto pathways I already have: the whole inside of a GPU becomes a gym franchise and a shooting range, locked into a canon and rendered as the 3D kernel world. It is how a year of hands-on GPU work (training runs, serving, my own pipelines) turned into kernels that reached #1 in the world on GPU MODE (Oct 2026).
+- **Lexicon factory: mapping GPU concepts onto a gym franchise and a shooting range**: The whole inside of a GPU becomes a gym franchise and a shooting range, locked into a canon and rendered as the 3D kernel world.
 - **Kernel world: the inside of a GPU as interactive 3D worlds**: Interactive pages that show how GPU kernels and model serving work, built in my locked gym and armoury language.
 
 ---
 
-Part of my [GitHub profile](../README.md), chapter: Mental models.
+Part of my [GitHub profile](../README.md), chapter: System design.

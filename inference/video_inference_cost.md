@@ -43,7 +43,6 @@ Self-hosted video generation (MiniMax H3 text-to-video, reference-to-video and f
 ### Self-hosted inference stack
 
 - vLLM self-hosting for LLM workloads; ComfyUI fleets for Wan 2.2, LTX-2.3, Seedance, SCAIL.
-- Origin: Midjourney video capped me at about 24 videos a day, and only while sitting at the computer, so I moved to Wan 2.1, then Wan 2.2, on rented GPUs.
 - About 10 Docker GPU image families; 11 verified Dockerfiles; Vast/RunPod launchers.
 - Each factory step can run on a local model or an API, with a clear default and a clean swap.
 

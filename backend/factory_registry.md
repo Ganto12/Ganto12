@@ -1,6 +1,6 @@
-# Factory registry: every factory a Lego piece, every UI a game
+# Factory registry: 40+ factories, each registered once and reused by key
 
-The backend that makes factories reusable: one database registry of factories, routes, runs and artifacts, and the UI rules every factory follows.
+The backend that makes factories reusable: one database registry of factories, routes, runs and artifacts. Unambiguous agentic harnesses to avoid execution drift: each factory exposes named modes, so agents choose from a menu instead of improvising. Naming inspired by video game UI settings: clean and unambiguous.
 
 ## Results
 
@@ -17,7 +17,7 @@ The backend that makes factories reusable: one database registry of factories, r
 ### FactoryOps
 
 - Structure: Factories and SubFactories hold the reusable units; FactoryRoutes chains them into named routes with their steps; FactoryRuns, FactoryJobs and FactoryArtifacts record every run, job and output, so a run can be traced from request to file.
-- Lego pieces: each factory is registered once with its key, purpose, aliases, skill, worker and start command, then reused by key. A new pipeline is a new route over existing pieces, not new code.
+- Reuse by key: each factory is registered once with its key, purpose, aliases, skill, worker and start command, then reused by key. A new pipeline is a new route over existing pieces, not new code.
 - Design philosophy: every factory has sub-modes that are totally unambiguous, for a clean-context agent or a human; one simple canonical way to execute each mode, with no back doors and no escape hatches. That is the approach across everything I build.
 - One skill per factory: each factory ships with a dedicated skill that says exactly how to run and interact with it cleanly, so a fresh agent runs it the canonical way the first time.
 - Resolver: a ranked lookup turns plain English ("which factory handles X?") into the best active, most recent route or sub-factory, with a one-line reason why it matches. Retrieval is the default; starting a run needs an explicit ask.
@@ -32,8 +32,8 @@ The backend that makes factories reusable: one database registry of factories, r
 
 ## What this covers
 
-- **FactoryOps: a registry that makes every factory a Lego piece**: Every factory, sub-factory and route is registered in one database with its purpose, aliases, steps and runs, so any factory can be found by plain English and clicked into a bigger pipeline instead of rebuilt.
-- **Factory UI spec: every factory is a video game**: Every factory ships like a video game: named modes and runnables with clean, easy names, so agents like Codex pick options instead of improvising, with no context bloat or confusing wording.
+- **FactoryOps: one registry, every factory registered once and reused by key**: Every factory, sub-factory and route is registered in one database with its purpose, aliases, steps and runs, so any factory can be found by plain English and clicked into a bigger pipeline instead of rebuilt.
+- **Factory UI spec: unambiguous agentic harnesses that avoid execution drift**: Unambiguous agentic harnesses to avoid execution drift: each factory exposes named modes, so agents choose from a menu instead of improvising. Naming inspired by video game UI settings: clean and unambiguous, with no context bloat.
 
 ---
 

@@ -9,11 +9,11 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 | **GPU MODE:** reached #1 on the H100 prefix-sum board (Oct 2026), 532 µs with a 16-bit output the grader accepted |
 | **Kernel factory:** the full-precision kernel is 719 µs at 89% of bandwidth (#2 today) |
 | **Kernel factory:** #4 on the B200 prefix-sum board at full precision (315.7 µs, Nov 2026) |
-| **Kernel factory:** #8 matmul H100 (of 41), #9 vector sum H100 |
+| **Kernel factory:** #8 matmul H100, #9 vector sum H100 |
 | **Kernel factory:** 35/35 Hard on LeetGPU (correctness-checked on a T4) |
 | **GPU kernels:** the full-precision kernel is 719 µs at 89% of bandwidth (#2 today) |
 | **GPU kernels:** #4 on the B200 prefix-sum board at full precision (315.7 µs, Nov 2026) |
-| **GPU kernels:** #8 matmul H100 (of 41), #9 vector sum H100 |
+| **GPU kernels:** #8 matmul H100, #9 vector sum H100 |
 | **LeetGPU:** 35/35 Hard accepted in one day (correctness-checked on a T4) |
 
 ## Setup and how it was measured
@@ -24,9 +24,8 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 
 ### Kernel factory
 
-- Understanding first: every GPU mechanism was learned through the lexicon factory, mapping it onto worlds I already know deeply (a gym franchise and a shooting range), then rendered as the 3D kernel world before any kernel was written.
 - Scientific loop: write a physics hypothesis (bytes moved vs the memory floor, latency chains), change one thing, measure with time stamps and paired sweeps, keep only what wins, log every step.
-- Origin: built on the approach frontier maths researchers use with AI agents to attack hypotheses: generate a candidate, test it against a hard falsifier, keep only what survives (the same shape as agent-driven search loops used on open maths problems).
+- Method: built on the approach frontier maths researchers use with AI agents to attack hypotheses: generate a candidate, test it against a hard falsifier, keep only what survives (the same shape as agent-driven search loops used on open maths problems).
 - Trading-system design: treat the gap between measured time and the physics floor as an anomaly to target; size each bet by expected gain; run many small reversible experiments; cut losers fast; stack the winners (knobs that gain only in combination).
 - Kill-test before build: every hypothesis gets a one-row falsifier in an existing sweep before anyone builds it. Example: a "no-MMA x-ray" at 64.5 µs vs about 103 µs ended the multicast idea. A wait audit (kr_physics) auto-files kill-test bets in their own lane. The eval lab does the same, with a kill-test listed for each gap.
 - Example, prefix sum on H100: measured stages from 1,735 µs to 532 µs, reaching #1 in the world in October 2026 with a 16-bit output the grader accepted, at about 90% of the card's 3.35 TB/s memory bandwidth, so the memory bus is the wall. The full-precision kernel is 719 µs at 89% of bandwidth (#2 today). Biggest single step: one flag per 128-byte line to kill false sharing (−35.6 µs).
@@ -37,7 +36,6 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 
 ### GPU kernels
 
-- How it was done: built with the kernel factory (agents plus physics hypotheses plus kill-tests) and learned through the lexicon factory; see both.
 - Speed-ups (leaderboard time vs the reference kernel; the board scores the geometric mean over its ranked shapes): Grayscale 4.98×, Prefix sum 3.26× (1,735 → 532 µs), Vector sum 1.57×, Matmul 1.15×.
 - Speed: #4 on the H100 prefix-sum board within a day and a half of my first run (11–13 Oct 2026), and later #1 (22 Oct). The #1 variant was found by a sweep on day 2 but only cut into a submission after a later audit, which is now a pipeline rule.
 - Reached #1 in the world on prefix sum (H100) in October 2026, at 532 µs with a 16-bit output the grader accepted, on a global leaderboard open to anyone; the full-precision kernel is 719 µs at 89% of bandwidth (#2 today), and I am top 10 on three more boards.
@@ -55,7 +53,7 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 
 ## What this covers
 
-- **Kernel factory: the system that reached #1 on GPU MODE**: Agents, physics hypotheses and kill-tests run as one loop: the factory that took a prefix-sum kernel to #1 on GPU MODE (H100, Oct 2026), top 10 on three more boards and 35/35 Hard on LeetGPU, with every mechanism first learned through the lexicon factory.
+- **Kernel factory: the system that reached #1 on GPU MODE**: Agents, physics hypotheses and kill-tests run as one loop: the factory that took a prefix-sum kernel to #1 on GPU MODE (H100, Oct 2026), top 10 on three more boards and 35/35 Hard on LeetGPU.
 - **GPU kernels (GPU MODE)**: Hand-tuned GPU kernels: reached #1 in the world on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), a global board open to anyone.
 - **LeetGPU: 35/35 Hard kernels in a day**: Cleared all 35 of 35 Hard LeetGPU challenges in one day, correctness-checked on a T4, with a kernel factory of builder and submitter agents.
 
