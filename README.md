@@ -2,7 +2,7 @@
 
 Self-taught in computer science and ML. I design systems. Solo, I run a company of artificial minds: agent harnesses are the management, factories are the departments, gates are quality control. With it I've built content factories, the GPU fleet and inference under them, kernels, and consumer apps. Model training is a small part.
 
-- **#1** on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), reached with the kernel factory; also #4 prefix sum (B200), #8 matmul (H100) and #9 vector sum (H100); 35/35 Hard on LeetGPU
+- **#1** on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), reached with the kernel factory; also #4 on B200 prefix sum at full precision (315.7 µs, 10 Nov 2026), #8 matmul (H100) and #9 vector sum (H100); 35/35 Hard on LeetGPU
 - **27–250×** cheaper than frontier APIs at quality my eval gates accept: 27× vs MiniMax H3 text-to-video, 57.5–125× vs standard OpenAI image routes, 15–250× vs Seedance 2 ([write-up](inference/video_inference_cost.md))
 - **1 engine**, end to end, over a Cartesian plane of hypotheses: hook-first copy, immutable packs, recipes, sub-factory renders and gates, with every output traceable (11,764-clip batch runs)
 
