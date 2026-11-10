@@ -1,6 +1,19 @@
-# Lexicon factory: reinterpreting GPUs through 30,000 to 68,000 hours of chasing mastery
+# Lexicon factory: canonical words and 3D scenes that translate any concept into worlds I already know
 
-I have put 30,000 to 68,000 hours into chasing mastery across football, the gym and video games, Rainbow Six Siege above all. Those neural pathways are already built, so I reinterpret GPUs through that lens and learn them far faster: the inside of a GPU becomes a gym franchise and a shooting range, locked into a canon only once each mapping survives a real kernel or number, and rendered as an interactive 3D kernel world.
+A factory that converts a new concept or topic into the world models I built over 30,000 to 68,000 hours of chasing mastery (football, the gym, video games, Rainbow Six Siege above all). It produces two things: canonical words, a locked lexicon where each concept has one agreed name in those worlds, and canonical scenes, interactive 3D visualisations that act the concept out. New ideas land on old, well-worn neural pathways, so I learn them far faster. GPUs and inference were the first domain.
+
+## What it makes
+
+- **Canonical words.** One canon sheet, the single source of truth. Every concept gets one locked name in each of two worlds, a gym franchise and a Siege range. Examples: GPU = gym or base; SM = rack or firing lane; HBM = plate factory or armoury; KV cache = the customer's training log or the intel file; prefill = the mission briefing; decode = one rep (or shot) per round; warp = a line of 32 identical specialists moving on one call.
+- **Canonical scenes.** Interactive 3D visualisations built only from locked words: a scene acts the concept out step by step, with live numbers where a real kernel or model exists. Today: the Kernel Lexicon, a 114-trick arsenal, the memory hierarchy, kernel replays and multi-GPU serving.
+- **Together.** The word gives a concept a handle; the scene shows it moving. Reading the word recalls the scene, and the scene already sits on a pathway from thousands of hours in those worlds.
+
+## How a concept goes through it
+
+1. **Propose:** draft a mapping from the new concept into a known world. Proposals are kept apart from locked words.
+2. **Test:** the mapping must survive a real kernel, number or mechanism. If the numbers break it, it is rewritten.
+3. **Lock:** it joins the canon sheet; builders may only use locked words, and the sheet outranks any single page.
+4. **Render:** the locked words drive the 3D scenes, so every scene speaks the same language.
 
 ## Results
 

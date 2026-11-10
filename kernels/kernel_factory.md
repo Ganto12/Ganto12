@@ -1,6 +1,6 @@
-# Kernel factory: #1 on GPU MODE, top 10 on two more boards, 35/35 LeetGPU Hard
+# Kernel factory: #1, #4, #8 and #9 on GPU MODE boards, 35/35 LeetGPU Hard
 
-Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and kill-tests in one loop). They reached #1 on the GPU MODE prefix-sum board (H100, Oct 2026) and the top 10 on two more boards, and cleared 35/35 Hard on LeetGPU in a day.
+Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and kill-tests in one loop). They reached the top 10 on four GPU MODE boards across H100 and B200 (#1 prefix sum H100, #4 prefix sum B200, #8 matmul H100, #9 vector sum H100; Oct 2026), and cleared 35/35 Hard on LeetGPU in a day.
 
 ## Results
 
@@ -8,10 +8,12 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 |---|
 | **GPU MODE:** reached #1 on the H100 prefix-sum board (Oct 2026), 532 µs with a 16-bit output the grader accepted |
 | **Kernel factory:** the full-precision kernel is 719 µs at 89% of bandwidth (#2 today) |
-| **Kernel factory:** #9 matmul H100, #9 vector sum H100 |
+| **Kernel factory:** #4 on the B200 prefix-sum board at full precision (315.7 µs, Nov 2026) |
+| **Kernel factory:** #8 matmul H100 (of 41), #9 vector sum H100 |
 | **Kernel factory:** 35/35 Hard on LeetGPU (correctness-checked on a T4) |
 | **GPU kernels:** the full-precision kernel is 719 µs at 89% of bandwidth (#2 today) |
-| **GPU kernels:** #9 matmul H100, #9 vector sum H100 |
+| **GPU kernels:** #4 on the B200 prefix-sum board at full precision (315.7 µs, Nov 2026) |
+| **GPU kernels:** #8 matmul H100 (of 41), #9 vector sum H100 |
 | **LeetGPU:** 35/35 Hard accepted in one day (correctness-checked on a T4) |
 
 ## Setup and how it was measured
@@ -38,7 +40,7 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 - How it was done: built with the kernel factory (agents plus physics hypotheses plus kill-tests) and learned through the lexicon factory; see both.
 - Speed-ups (leaderboard time vs the reference kernel; the board scores the geometric mean over its ranked shapes): Grayscale 4.98×, Prefix sum 3.26× (1,735 → 532 µs), Vector sum 1.57×, Matmul 1.15×.
 - Speed: #4 on the H100 prefix-sum board within a day and a half of my first run (11–13 Oct 2026), and later #1 (22 Oct). The #1 variant was found by a sweep on day 2 but only cut into a submission after a later audit, which is now a pipeline rule.
-- Reached #1 in the world on prefix sum (H100) in October 2026, at 532 µs with a 16-bit output the grader accepted, on a global leaderboard open to anyone; the full-precision kernel is 719 µs at 89% of bandwidth (#2 today), and I am top 10 on two more boards.
+- Reached #1 in the world on prefix sum (H100) in October 2026, at 532 µs with a 16-bit output the grader accepted, on a global leaderboard open to anyone; the full-precision kernel is 719 µs at 89% of bandwidth (#2 today), and I am top 10 on three more boards.
 - Method: profile, try a variant, keep the faster one; the leaderboard decides.
 
 ### LeetGPU
@@ -53,7 +55,7 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 
 ## What this covers
 
-- **Kernel factory: the system that reached #1 on GPU MODE**: Agents, physics hypotheses and kill-tests run as one loop: the factory that took a prefix-sum kernel to #1 on GPU MODE (H100, Oct 2026), top 10 on two more boards and 35/35 Hard on LeetGPU, with every mechanism first learned through the lexicon factory.
+- **Kernel factory: the system that reached #1 on GPU MODE**: Agents, physics hypotheses and kill-tests run as one loop: the factory that took a prefix-sum kernel to #1 on GPU MODE (H100, Oct 2026), top 10 on three more boards and 35/35 Hard on LeetGPU, with every mechanism first learned through the lexicon factory.
 - **GPU kernels (GPU MODE)**: Hand-tuned GPU kernels: reached #1 in the world on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), a global board open to anyone.
 - **LeetGPU: 35/35 Hard kernels in a day**: Cleared all 35 of 35 Hard LeetGPU challenges in one day, correctness-checked on a T4, with a kernel factory of builder and submitter agents.
 

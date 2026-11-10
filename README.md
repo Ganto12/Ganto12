@@ -2,7 +2,7 @@
 
 Self-taught in computer science and ML. I design systems. Solo, I run a company of artificial minds: agent harnesses are the management, factories are the departments, gates are quality control. With it I've built content factories, the GPU fleet and inference under them, kernels, and consumer apps. Model training is a small part.
 
-- **#1** on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), reached with the kernel factory; top 10 on two more boards (#9 matmul, #9 vector sum); 35/35 Hard on LeetGPU
+- **#1** on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), reached with the kernel factory; also #4 prefix sum (B200), #8 matmul (H100) and #9 vector sum (H100); 35/35 Hard on LeetGPU
 - **27–250×** cheaper than frontier APIs at quality my eval gates accept: 27× vs MiniMax H3 text-to-video, 57.5–125× vs standard OpenAI image routes, 15–250× vs Seedance 2 ([write-up](inference/video_inference_cost.md))
 - **1 engine**, end to end, over a Cartesian plane of hypotheses: hook-first copy, immutable packs, recipes, sub-factory renders and gates, with every output traceable (11,764-clip batch runs)
 
@@ -26,7 +26,7 @@ Write-ups
 │   └── Self-auditing agents ....................... One report contract; weekly self-audit
 │
 ├── Mental models: General problem solving across domains, always in pursuit of mastery.
-│   ├── Lexicon factory ............................ GPU as a gym and a range: 114 tricks
+│   ├── Lexicon factory ............................ Locked words + 3D scenes
 │   └── Mental models .............................. Games, sport, markets and GPUs
 │
 ├── Content engine: One end-to-end engine over a Cartesian plane of hypotheses.
@@ -40,7 +40,7 @@ Write-ups
 │   ├── vLLM speed-ups ............................. 3.08× single-stream, 1.86× at concurrency 32
 │   ├── Video inference on my own GPUs ............. 27× cheaper than MiniMax's own H3 API
 │   ├── Kernels
-│   │   ├── Kernel factory ......................... #1 GPU MODE, #9 ×2, 35/35 LeetGPU Hard
+│   │   ├── Kernel factory ......................... GPU MODE #1, #4, #8, #9; 35/35 LeetGPU Hard
 │   │   ├── Eval factory ........................... 4 verdicts, 23-case self-test
 │   │   └── Kernel debugging ....................... 46 of 50 drills diagnosed, 0 false confirms
 │   └── A little model training .................... 70B LoRA on 2× B200, served TP=2
@@ -75,11 +75,11 @@ The operating system behind everything below. Agent harnesses are the management
 
 ## Mental models: General problem solving across domains, always in pursuit of mastery.
 
-The lexicon factory is how I learn GPUs. I put 30,000 to 68,000 hours into chasing mastery across football, the gym and video games (Rainbow Six Siege above all), and I reinterpret GPUs through the neural pathways those hours built, so I learn them far faster. The mental models are how I attack problems in any domain.
+The lexicon factory turns any new concept into canonical words and 3D scenes from worlds I already know (30,000 to 68,000 hours across football, the gym and video games, Rainbow Six Siege above all), so it lands on old neural pathways; GPUs and inference came first. The mental models are how I attack problems in any domain.
 
 | Write-up | Result |
 |---|---|
-| [Lexicon factory: reinterpreting GPUs through 30,000 to 68,000 hours of chasing mastery](mental_models/lexicon_factory.md) | GPU as a gym and a range: 114 tricks |
+| [Lexicon factory: canonical words and 3D scenes that translate any concept into worlds I already know](mental_models/lexicon_factory.md) | Locked words + 3D scenes |
 | [Mental models: general problem solving across domains, in pursuit of mastery](mental_models/mental_models.md) | Games, sport, markets and GPUs |
 
 ## Content engine: One end-to-end engine over a Cartesian plane of hypotheses.
@@ -108,7 +108,7 @@ Find the gap to the theoretical limit, then close it: serving levers first (quan
 
 | Write-up | Result |
 |---|---|
-| [Kernel factory: #1 on GPU MODE, top 10 on two more boards, 35/35 LeetGPU Hard](kernels/kernel_factory.md) | #1 GPU MODE, #9 ×2, 35/35 LeetGPU Hard |
+| [Kernel factory: #1, #4, #8 and #9 on GPU MODE boards, 35/35 LeetGPU Hard](kernels/kernel_factory.md) | GPU MODE #1, #4, #8, #9; 35/35 LeetGPU Hard |
 | [Eval factory: is a faster path still the same model?](kernels/eval_factory.md) | 4 verdicts, 23-case self-test |
 | [Kernel debugging: a drill factory and the real incidents behind it](kernels/kernel_debugging.md) | 46 of 50 drills diagnosed, 0 false confirms |
 

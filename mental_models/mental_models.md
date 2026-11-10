@@ -20,7 +20,7 @@ General mental models and insights for problem solving across many domains (game
 
 ## Where they show up
 
-- The [lexicon factory](lexicon_factory.md) is how I learn GPUs; the [kernel factory](../kernels/kernel_factory.md) is measure-then-iterate against a public leaderboard; the [content engine](../engine/kp_content_engine.md) is a plane of hypotheses tested cell by cell.
+- The [lexicon factory](lexicon_factory.md) turns new concepts into canonical words and 3D scenes from worlds I know; the [kernel factory](../kernels/kernel_factory.md) is measure-then-iterate against a public leaderboard; the [content engine](../engine/kp_content_engine.md) is a plane of hypotheses tested cell by cell.
 
 
 ---
