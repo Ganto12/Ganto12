@@ -4,7 +4,7 @@
 - **27–250×** cheaper than frontier APIs at quality my eval gates accept: 27× vs MiniMax H3 text-to-video, 57.5–125× vs standard OpenAI image routes, 15–250× vs Seedance 2 ([write-up](inference/video_inference_cost.md))
 - **1 engine**, end to end, over a Cartesian plane of hypotheses: hook-first copy, immutable packs, recipes, sub-factory renders and gates, with every output traceable (11,764-clip batch runs)
 
-I design agent-run systems: harnesses, factories and gates.
+Self-taught. I design agent-run systems: harnesses, factories and gates.
 
 Numbers are measured unless marked "about". Code lives in private repositories; full method, code walkthroughs and receipts are available in a working session.
 
