@@ -34,7 +34,7 @@ Built-in serving levers (FP8 weights, FP8 KV cache, multi-token prediction) pick
 - Qwen3.8-27B on one RTX PRO 6000 Blackwell Max-Q (300 W) with vLLM 0.32.0: FP8 weights, FP8 KV cache and MTP speculative decoding, all built into vLLM, each picked and validated against a BF16 baseline.
 - Measured prefix caching: the hit rate tracks the workload's theoretical maximum (95.6% vs 96.5% in the steady-state agent replay); found what breaks it (a timestamp at the top of the prompt drops it to 0%).
 - Long agent session (250k tokens): prefix-cache hit rate 96.5% at 128–192k and 97.5% at 192–260k; two compactions at about 237k (71 s and 99 s); 10 of 10 planted facts kept every time.
-- Step-graph gap map: batch-1 decode at 72.8% of spec-bandwidth speed-of-light (C3: 15.21 ms ideal vs 20.88 ms); about 6 ms of a 29 ms MTP step is sized for two serving-path fixes (see the physics-gap write-up).
+- Step-graph gap map: about 6 ms of a 29 ms MTP step (about 20%) is sized for two serving-path fixes, a cuBLAS tile mis-pick and a 3x lm_head read (see the physics-gap write-up).
 
 ### Quantization and compression
 

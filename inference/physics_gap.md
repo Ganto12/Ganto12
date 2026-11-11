@@ -16,7 +16,7 @@ A very simple framework: work out the theoretical limit for each step from first
 ## How it works
 
 - Method: derive the ideal time for each step from first principles (bytes moved vs memory bandwidth, compute vs peak), measure the real time, and rank the gaps. Then give each gap a one-row kill-test that confirms or kills the suspected cause before anyone builds a fix.
-- Decode (C3: FP8 weights + FP8 KV, batch 1): 15.21 ms ideal vs 20.88 ms measured, 72.8% of spec-bandwidth speed-of-light (1.792 TB/s). Cold 250k-token prefill: 39.6% of the physics limit.
+- Decode (C3: FP8 weights + FP8 KV, batch 1): 15.21 ms ideal at the 1.792 TB/s spec bandwidth vs 20.88 ms measured; the ranked gaps inside that step are where the work goes.
 - Finding (C6, the MTP step, 4 tokens per verify): a cuBLAS tile mis-pick on GDN in_proj_ba costs 1.52 ms per step (1.55 ms measured vs about 26 µs ideal). At 4 tokens cuBLAS leaves the gemv path and picks a wmma tile with about 6 CTAs on 188 SMs.
 - Cost, not a find: in the same MTP step, reading the BF16 lm_head 3 times (once per draft token) costs 4.76 ms, about 17% of the step. That is how MTP drafting works. The kernel already runs at 89% of bandwidth, so the lever is fewer bytes (a pruned draft vocab or an FP8 lm_head).
 - Together about 6 ms of a 29 ms MTP step (about 20%) is sized for two serving-path changes; sized, not yet landed.
