@@ -27,6 +27,7 @@ Self-hosted video generation (MiniMax H3 text-to-video, reference-to-video and f
 - Packaging: the model set is about 51.5 GB, too large for one baked image, so it is fetched on start (about 470 s at about 111 MB/s). The image comes in three builds (full, without the text encoder, and without the text encoder and transformer), chosen per host disk.
 - Speed-up A/B (one RTX PRO 6000, 576p, 4 s, 96 frames, 20 steps, fixed seed): two baseline runs were bit-identical, a clean zero noise floor. Profiling one 5.2 s step put attention at about 55%. torch.compile and CUDA graphs gave no safe gain; SageAttention FP8 cut 15–27% per step but changes the output, so it is kept out of the canonical engine.
 - Watching output: a gallery refreshes from the VM and object storage without downloading MP4s.
+- Honest loss: SageAttention FP8 was 15–27% faster per step but failed my strict bit-identical eval. Probably perceptually lossless, but untested, so it stayed out of the canonical engine.
 
 ### Local vs API cost arbitrage
 

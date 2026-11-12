@@ -25,6 +25,7 @@ A debug factory with one canonical step graph, seeded from real incidents, plus 
 - Two voices: every diagnosis is written once in kernel words (mechanism, culprit line, the check that caught it) and once in my own lexicon, so each rep deepens the understanding, not just the fix.
 - Results: on all 50 lab drills it named the right failure class and the right kernel on 46, with 0 false confirms; the other 4 are left undiagnosed rather than guessed. Tightening the order (re-score after localising, early stop, checks that must flip a passing case to a failing one) cut false confirms from 3 to 0 and median time by about 40% on the first 8 drills.
 - Modes: status (read-only ranking of every class at current priors) and run (diagnose incidents and append the cases); registered in FactoryOps beside the kernel factory, with its own skill, so a clean-context agent runs it the canonical way the first time.
+- The method, for an engine problem like a long-context OOM: split ours vs someone else's (ours ships behind locked, deterministic evals, so a failure means the evals get audited first). Hardware first, then the locked Wrong X checklist → maths → shape → state → engine flag → capture → time → place → measurement. Find the tell, score each hypothesis by probability, and grade the urgency: parallel agents if customers are hit, one agent for a slow burn. Ship only through red/green evals at production concurrency, batch-invariant outputs and a canary.
 
 ### Debugging for real
 

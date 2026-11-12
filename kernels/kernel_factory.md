@@ -6,7 +6,7 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 
 | Measured result |
 |---|
-| **GPU MODE:** two #1s on the global kernel leaderboards, solo: H100 prefix sum (Oct 2026) and B200 histogram (Nov 2026), edging out team entries including the Nebius Applied AI Team. Top 10 on five boards in all: #4 B200 prefix sum (315.7 µs, full precision), #8 matmul H100 (Oct 2026), #9 vector sum H100 |
+| **GPU MODE:** two #1s on the global kernel leaderboards, solo: H100 prefix sum (Oct 2026) and B200 histogram (Nov 2026), edging out team entries including the Nebius Applied AI Team (Nebius sponsors GPU MODE's B200 compute). Top 10 on five boards in all: #4 B200 prefix sum (315.7 µs, full precision), #8 matmul H100 (Oct 2026), #9 vector sum H100 |
 | **Kernel factory:** 35/35 Hard on LeetGPU (correctness-checked on a T4) |
 | **LeetGPU:** 35/35 Hard accepted in one day (correctness-checked on a T4) |
 
@@ -30,8 +30,9 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 
 ### GPU kernels
 
+- Why kernels: a distinct asymmetry. There's a clear stat to chase, and you sit at the most important point. One fast kernel can drive 2x, even 10x the tokens. That sets what a company can sell, how cheap it runs and how fast the world benefits from AI.
 - Speed-ups (leaderboard time vs the reference kernel; the board scores the geometric mean over its ranked shapes): Grayscale 4.98×, Prefix sum 3.26× (1,735 → 532 µs), Vector sum 1.57×, Matmul 1.15×.
-- Speed: on the board within a day and a half of my first run (11–13 Oct 2026), and #1 by day 11 (22 Oct). The #1 variant was found by a sweep on day 2 but only cut into a submission after a later audit, which is now a pipeline rule.
+- Speed to #1: H100 prefix sum 11 days after my first run (11 to 22 Oct 2026). B200 histogram in just 2 days (10 to 12 Nov 2026), edging out the Nebius Applied AI Team (Nebius sponsors GPU MODE's B200 compute).
 - Reached #1 in the world on prefix sum (H100) in October 2026, on a global leaderboard open to anyone. A second #1 followed on B200 histogram (Nov 2026). Top 5 on one more board and top 10 on two more.
 - Method: profile, try a variant, keep the faster one; the leaderboard decides.
 
@@ -48,7 +49,7 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 ## What this covers
 
 - **Kernel factory: the system behind two #1s on GPU MODE**: Agents, physics hypotheses and kill-tests run as one loop: the factory behind two #1s on GPU MODE, solo (H100 prefix sum, Oct 2026; B200 histogram, Nov 2026), top 10 on five boards in all and 35/35 Hard on LeetGPU.
-- **GPU kernels (GPU MODE)**: Hand-tuned GPU kernels: two #1s on GPU MODE's global kernel leaderboards, solo (H100 prefix sum, Oct 2026; B200 histogram, Nov 2026), edging out team entries including the Nebius Applied AI Team; top 10 on five boards in all.
+- **GPU kernels (GPU MODE)**: Hand-tuned GPU kernels: two #1s on GPU MODE's global kernel leaderboards, solo (H100 prefix sum, Oct 2026; B200 histogram, Nov 2026), edging out team entries including the Nebius Applied AI Team (Nebius sponsors GPU MODE's B200 compute); top 10 on five boards in all.
 - **LeetGPU: 35/35 Hard kernels in a day**: Cleared all 35 of 35 Hard LeetGPU challenges in one day, correctness-checked on a T4, with a kernel factory of builder and submitter agents.
 
 ---
