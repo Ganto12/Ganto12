@@ -1,6 +1,6 @@
 # Kernel factory: #1, #4, #8 and #9 on GPU MODE boards, 35/35 LeetGPU Hard
 
-Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and kill-tests in one loop). They reached the top 10 on five GPU MODE boards across H100 and B200 (#1 prefix sum H100, Oct 2026; #4 prefix sum B200 at full precision, 315.7 µs, 10 Nov 2026; #8 histogram B200, 10.2 µs, 11 Nov 2026; #8 matmul H100, Oct 2026; #9 vector sum H100), and cleared 35/35 Hard on LeetGPU in a day.
+Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and kill-tests in one loop). They reached the top 10 on five GPU MODE boards across H100 and B200 (#1 prefix sum H100, Oct 2026; #4 prefix sum B200 at full precision, 315.7 µs, 10 Nov 2026; #4 histogram B200, 9.9 µs, 12 Nov 2026; #8 matmul H100, Oct 2026; #9 vector sum H100), and cleared 35/35 Hard on LeetGPU in a day.
 
 ## Results
 
@@ -10,12 +10,12 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 | **Kernel factory:** the full-precision kernel is 719 µs at 89% of bandwidth (#2 today) |
 | **Kernel factory:** #4 on the B200 prefix-sum board at full precision (315.7 µs, Nov 2026) |
 | **Kernel factory:** #8 matmul H100 (Oct 2026), #9 vector sum H100 |
-| **Kernel factory:** #8 histogram B200 (Nov 2026) |
+| **Kernel factory:** #4 histogram B200 (Nov 2026) |
 | **Kernel factory:** 35/35 Hard on LeetGPU (correctness-checked on a T4) |
 | **GPU kernels:** the full-precision kernel is 719 µs at 89% of bandwidth (#2 today) |
 | **GPU kernels:** #4 on the B200 prefix-sum board at full precision (315.7 µs, Nov 2026) |
 | **GPU kernels:** #8 matmul H100 (Oct 2026), #9 vector sum H100 |
-| **GPU kernels:** #8 histogram B200 (Nov 2026) |
+| **GPU kernels:** #4 histogram B200 (Nov 2026) |
 | **LeetGPU:** 35/35 Hard accepted in one day (correctness-checked on a T4) |
 
 ## Setup and how it was measured

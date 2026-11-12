@@ -1,6 +1,6 @@
 # AI systems that ship and scale
 
-- **#1** on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), reached with the kernel factory; also #4 on B200 prefix sum at full precision (315.7 µs, 10 Nov 2026), #8 histogram (B200, 11 Nov 2026), #8 matmul (H100, Oct 2026) and #9 vector sum (H100); 35/35 Hard on LeetGPU
+- **#1** on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), reached with the kernel factory; also #4 on B200 prefix sum at full precision (315.7 µs, 10 Nov 2026), #4 histogram (B200, 12 Nov 2026), #8 matmul (H100, Oct 2026) and #9 vector sum (H100); 35/35 Hard on LeetGPU
 - **27–250×** cheaper than frontier APIs at quality my eval gates accept: 27× vs MiniMax H3 text-to-video, 57.5–125× vs standard OpenAI image routes, 15–250× vs Seedance 2 ([write-up](inference/video_inference_cost.md))
 - **1 engine**, end to end, over a Cartesian plane of hypotheses: hook-first copy, immutable packs, recipes, sub-factory renders and gates, with every output traceable (11,764-clip batch runs)
 
