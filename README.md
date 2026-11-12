@@ -29,7 +29,7 @@ Write-ups
 │   ├── vLLM speed-ups ............................. 3.08× single-stream, 1.86× at concurrency 32
 │   ├── Video inference on my own GPUs ............. 27× cheaper than MiniMax's own H3 API
 │   ├── Kernels
-│   │   ├── Kernel factory ......................... GPU MODE #1 x2, #4, #8, #9; 35/35 LeetGPU Hard
+│   │   ├── Kernel factory ......................... GPU MODE 2x #1, #4, #8, #9; 35/35 LeetGPU Hard
 │   │   ├── Eval factory ........................... 4 verdicts, 23-case self-test
 │   │   └── Kernel debugging ....................... 46 of 50 drills diagnosed, 0 false confirms
 │   └── A little model training .................... 70B LoRA on 2× B200, served TP=2
@@ -89,7 +89,7 @@ Find the gap to the theoretical limit, then close it: serving levers first (quan
 
 | Write-up | Result |
 |---|---|
-| [Kernel factory: two #1s, #4, #8 and #9 on GPU MODE boards, 35/35 LeetGPU Hard](kernels/kernel_factory.md) | GPU MODE #1 x2, #4, #8, #9; 35/35 LeetGPU Hard |
+| [Kernel factory: 2x #1, #4, #8 and #9 on GPU MODE boards, 35/35 LeetGPU Hard](kernels/kernel_factory.md) | GPU MODE 2x #1, #4, #8, #9; 35/35 LeetGPU Hard |
 | [Eval factory: is a faster path still the same model?](kernels/eval_factory.md) | 4 verdicts, 23-case self-test |
 | [Kernel debugging: a drill factory and the real incidents behind it](kernels/kernel_debugging.md) | 46 of 50 drills diagnosed, 0 false confirms |
 
