@@ -46,7 +46,7 @@ An agent harness that maps a new technical concept onto domains I already know a
 
 ## What this covers
 
-- **Lexicon factory: mapping GPU concepts onto a gym franchise and a shooting range**: The whole inside of a GPU becomes a gym franchise and a shooting range, locked into a canon and rendered as the 3D kernel world.
+- **Lexicon factory: mapping GPU concepts onto a gym franchise and a shooting range**: The whole inside of a GPU becomes a gym franchise and a shooting range, locked into a canon and rendered as the 3D kernel world. It is how a year of hands-on GPU work (training runs, serving, my own pipelines) turned into kernels with two #1s on GPU MODE (Oct and Nov 2026).
 - **Kernel world: the inside of a GPU as interactive 3D worlds**: Interactive pages that show how GPU kernels and model serving work, built in my locked gym and armoury language.
 
 ---
