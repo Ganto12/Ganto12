@@ -1,6 +1,6 @@
 # Kernel factory: #1, #4, #8 and #9 on GPU MODE boards, 35/35 LeetGPU Hard
 
-Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and kill-tests in one loop). They reached the top 10 on five GPU MODE boards across H100 and B200 (#1 prefix sum H100, Oct 2026; #4 prefix sum B200 at full precision, 315.7 µs, 10 Nov 2026; #4 histogram B200, 9.9 µs, 12 Nov 2026; #8 matmul H100, Oct 2026; #9 vector sum H100), and cleared 35/35 Hard on LeetGPU in a day.
+Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and kill-tests in one loop). They reached the top 5 on three GPU MODE boards and the top 10 on five, across H100 and B200 (#1 prefix sum H100, Oct 2026; #4 prefix sum B200 at full precision, 315.7 µs, 10 Nov 2026; #4 histogram B200, 9.9 µs, 12 Nov 2026; #8 matmul H100, Oct 2026; #9 vector sum H100), and cleared 35/35 Hard on LeetGPU in a day.
 
 ## Results
 
@@ -40,7 +40,7 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 
 - Speed-ups (leaderboard time vs the reference kernel; the board scores the geometric mean over its ranked shapes): Grayscale 4.98×, Prefix sum 3.26× (1,735 → 532 µs), Vector sum 1.57×, Matmul 1.15×.
 - Speed: #4 on the H100 prefix-sum board within a day and a half of my first run (11–13 Oct 2026), and later #1 (22 Oct). The #1 variant was found by a sweep on day 2 but only cut into a submission after a later audit, which is now a pipeline rule.
-- Reached #1 in the world on prefix sum (H100) in October 2026, at 532 µs with a 16-bit output the grader accepted, on a global leaderboard open to anyone; the full-precision kernel is 719 µs at 89% of bandwidth (#2 today), and I am top 10 on four more boards.
+- Reached #1 in the world on prefix sum (H100) in October 2026, at 532 µs with a 16-bit output the grader accepted, on a global leaderboard open to anyone; the full-precision kernel is 719 µs at 89% of bandwidth (#2 today), and I am top 5 on two more boards and top 10 on four more.
 - Method: profile, try a variant, keep the faster one; the leaderboard decides.
 
 ### LeetGPU
@@ -55,7 +55,7 @@ Hand-tuned GPU kernels built by a kernel factory (agents, physics hypotheses and
 
 ## What this covers
 
-- **Kernel factory: the system that reached #1 on GPU MODE**: Agents, physics hypotheses and kill-tests run as one loop: the factory that took a prefix-sum kernel to #1 on GPU MODE (H100, Oct 2026), top 10 on four more boards and 35/35 Hard on LeetGPU.
+- **Kernel factory: the system that reached #1 on GPU MODE**: Agents, physics hypotheses and kill-tests run as one loop: the factory that took a prefix-sum kernel to #1 on GPU MODE (H100, Oct 2026), top 5 on two more boards and top 10 on four more and 35/35 Hard on LeetGPU.
 - **GPU kernels (GPU MODE)**: Hand-tuned GPU kernels: reached #1 in the world on the GPU MODE prefix-sum leaderboard (H100, Oct 2026), a global board open to anyone.
 - **LeetGPU: 35/35 Hard kernels in a day**: Cleared all 35 of 35 Hard LeetGPU challenges in one day, correctness-checked on a T4, with a kernel factory of builder and submitter agents.
 
