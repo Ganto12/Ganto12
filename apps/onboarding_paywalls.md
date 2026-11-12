@@ -35,6 +35,7 @@ An image-generation factory that reverse-engineers an onboarding flow and regene
 ## Limits
 
 - Honest limits: no split is running right now (each live audience has one variant at 100%), and conversion results for each variant aren't recorded in this hub.
+- Honest limits: generated text and buttons can drift between pages, so every page still gets a by-eye check, and an art-style pass (Paywall F) is still under review.
 
 ## What this covers
 
