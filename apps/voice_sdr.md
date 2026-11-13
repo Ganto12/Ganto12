@@ -1,6 +1,8 @@
 # Voice SDR (full-duplex)
 
-A real-time voice sales agent tuned for latency. Sunset because of robocalling regulation.
+A real-time voice sales agent tuned for latency.
+
+> **Why it was sunset:** robocalling regulation. US rules now treat AI-generated voices in outbound calls as robocalls (FCC ruling, 2024), which need the person's prior consent. That killed cold outbound calling as a use case, so the build stopped here.
 
 Checked = built. Unchecked = specced, not built.
 
