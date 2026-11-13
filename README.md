@@ -48,7 +48,7 @@ Write-ups
 │
 └── Apps
     ├── Onboarding and paywalls .................... Winning flow takes 100% of iOS onboarding
-    ├── Voice SDR .................................. ~49 ms STT; 20, 200 and 800 ms reply paths
+    ├── Voice SDR .................................. ~49 ms streaming STT; ~100-cluster objection…
     └── iOS native apps ............................ 6 SwiftUI apps, 20 locales, 1 on the App Store
 ```
 
@@ -122,5 +122,5 @@ Shipped: 1 app live on the App Store, 6 SwiftUI apps, 20 locales.
 | Write-up | Result |
 |---|---|
 | [Onboarding and paywalls: generated flows tested head to head](apps/onboarding_paywalls.md) | Winning flow takes 100% of iOS onboarding |
-| [Voice SDR (full-duplex)](apps/voice_sdr.md) | ~49 ms STT; 20, 200 and 800 ms reply paths |
+| [Voice SDR (full-duplex)](apps/voice_sdr.md) | ~49 ms streaming STT; ~100-cluster objection tree |
 | [iOS native apps (SwiftUI)](apps/ios_native.md) | 6 SwiftUI apps, 20 locales, 1 on the App Store |
