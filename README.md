@@ -1,8 +1,8 @@
 # AI systems that ship and scale
 
 - **#1** on two GPU MODE leaderboards, reached with the kernel factory: prefix sum (H100, Oct 2026) and histogram (B200, 12 Nov 2026); also #4 on B200 prefix sum at full precision (315.7 µs, 10 Nov 2026), #8 matmul (H100, Oct 2026) and #9 vector sum (H100); 35/35 Hard on LeetGPU
-- **27–250×** cheaper than frontier APIs for perceptually lossless tradeoffs: 27× vs MiniMax H3 text-to-video, 57.5–125× vs standard OpenAI image routes, 15–250× vs Seedance 2 ([write-up](inference/video_inference_cost.md))
-- **1 engine**, end to end, over a Cartesian plane of hypotheses: hook-first copy, immutable packs, recipes, sub-factory renders and gates, with every output traceable (11,764-clip batch runs)
+- **48–250×** cheaper than frontier APIs for perceptually lossless tradeoffs: 48× vs MiniMax H3 text-to-video, 57.5–125× vs standard OpenAI image routes, 15–250× vs Seedance 2 ([write-up](inference/video_inference_cost.md))
+- **1 engine**, end to end, over a Cartesian plane of hypotheses: hook-first copy, recipes, sub-factory renders, gates and Postiz routing, closing as an immutable pack, with every output traceable
 
 Self-taught. I design agent-run systems: harnesses, factories and gates.
 
@@ -26,8 +26,9 @@ Write-ups
 │
 ├── Inference and kernels
 │   ├── Physics-gap method ......................... Measured vs theoretical limit, gap by gap
+│   ├── Weight-space programming ................... Unwanted speech cut 4.3×, talking clips 9×…
 │   ├── vLLM speed-ups ............................. 3.08× single-stream, 1.86× at concurrency 32
-│   ├── Video inference on my own GPUs ............. 27× cheaper than MiniMax's own H3 API
+│   ├── Video inference on my own GPUs ............. 48× cheaper than MiniMax's own H3 API
 │   ├── Kernels
 │   │   ├── Kernel factory ......................... GPU MODE 2x #1, #4, #8, #9; 35/35 LeetGPU Hard
 │   │   ├── Eval factory ........................... 4 verdicts, 23-case self-test
@@ -65,7 +66,7 @@ Agent harnesses: one skill per job, clean-context agents, one report contract an
 
 ## Content engine
 
-First-principles design of the most pertinent axes turns an open creative space into a Cartesian plane of hypotheses. Each cell ships as an immutable pack through recipes and sub-factories, with clean traceability from every output back to its cell; a new format is a new recipe, not new code.
+First-principles design of the most pertinent axes turns an open creative space into a Cartesian plane of hypotheses. Each cell runs through recipes and sub-factories, then Postiz to owned infrastructure, and closes as an atomic, immutable pack, with clean traceability from every output back to its cell; a new format is a new recipe, not new code.
 
 | Write-up | Result |
 |---|---|
@@ -81,8 +82,9 @@ Find the gap to the theoretical limit, then close it: serving levers first (quan
 | Write-up | Result |
 |---|---|
 | [Physics-gap method: compare against the theoretical limit, then close the gap](inference/physics_gap.md) | Measured vs theoretical limit, gap by gap |
+| [Weight-space programming: fixing a video LoRA by editing its weights](inference/weight_space.md) | Unwanted speech cut 4.3×, talking clips 9× rarer, no training |
 | [vLLM speed-ups: FP8, FP8 KV cache and MTP, picked and validated](inference/vllm_speedups.md) | 3.08× single-stream, 1.86× at concurrency 32 |
-| [Video inference on my own GPUs: MiniMax H3 at 27× less than its own API](inference/video_inference_cost.md) | 27× cheaper than MiniMax's own H3 API |
+| [Video inference on my own GPUs: MiniMax H3 at 48× less than its own API](inference/video_inference_cost.md) | 48× cheaper than MiniMax's own H3 API |
 | [A little model training: 70B LoRA fine-tunes on 2× B200, then letting a classifier win](inference/multi_gpu_training.md) | 70B LoRA on 2× B200, served TP=2 |
 
 ### Kernels

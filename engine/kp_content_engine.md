@@ -10,25 +10,28 @@ One end-to-end organic engine: first-principles design of the most pertinent axe
 
 ## How it is organised
 
-A Cartesian grid of cells on one side, a tree of sub-factories on the other. Each cell is routed to a recipe; each recipe fixes its slots (how many, and what role each plays) and the sub-factory that fills them. A new format is a new recipe on an existing branch, not new code.
+A Cartesian grid of cells on one side, a tree of sub-factories on the other. Hooks split into product and non-product posts, and each branch routes to its own recipes in a cookbook. A recipe fixes its slots (how many, and what role each plays), the typography and animation rules for its videos, and the sub-factory that fills them. A new format is a new recipe on an existing branch, not new code.
+
+A clean step graph runs it in stages: batch the hooks, then batch the recipes, then route through Postiz to owned infrastructure. The final step is an atomic, immutable pack.
 
 ```mermaid
 flowchart LR
     B["Brief"] --> H["Hook-first copy"]
     H --> C["Pick an unused cell<br/>(seeded, no repeats)"]
-    C --> P["Immutable pack<br/>copy + cell fixed"]
-    P --> R["Recipe<br/>slots and roles"]
+    C --> K{"Product or<br/>non-product?"}
+    K --> R["Recipe from the cookbook<br/>slots, type, motion"]
     I["Ingestion bucket<br/>unique source content"] --> F
     R --> F["Sub-factory render"]
     F --> G["Quality gates"]
     G --> Q["Review pack<br/>manifest + assets"]
-    Q --> S["Scheduler"]
-    S -.-> A["Hypothesis analysis<br/>(results fed in later)"]
+    Q --> S["Postiz routing<br/>to owned infrastructure"]
+    S --> P["Atomic, immutable pack<br/>(final step)"]
+    P -.-> A["Hypothesis analysis<br/>(results fed in later)"]
     A -.-> D["Darwin: RL over<br/>winning cells (specced)"]
     D -.-> C
 ```
 
-- **Immutable packs:** preview, reviewed checkpoint, then lock. From then on the pack does not change: every piece of copy, plus translations into 10 languages, is fixed before render, and the factory never rewrites the words.
+- **Immutable packs (the final step):** preview, reviewed checkpoint, then lock. Once routed, each post closes as an atomic, immutable pack that never changes, so its lineage stays fixed.
 - **Ingestion bucket:** sub-factories pull unique source content from a shared bucket, so cells differ in material, not only in wording.
 - **Gates:** a prompt-trace audit must pass before anything publishes, and vision gates score every picture and clip (see [Decisions API gates](../backend/decisions_gates.md)).
 - **Hypothesis analysis:** each batch is a pre-flight-checked test of named cells; result data feeds the analysis afterwards.
@@ -43,9 +46,8 @@ flowchart LR
 
 | Measured result |
 |---|
-| About 15 recipes; 5 core batch shapes plus 11 reaction shapes |
+| A cookbook of recipes over core and reaction batch shapes |
 | Copy and translations into 10 languages locked before render |
-| An 800-post rollout in about 9 days |
 
 ## Limits
 

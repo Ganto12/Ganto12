@@ -1,4 +1,4 @@
-# Video inference on my own GPUs: MiniMax H3 at 27× less than its own API
+# Video inference on my own GPUs: MiniMax H3 at 48× less than its own API
 
 Self-hosted video generation (MiniMax H3 text-to-video, reference-to-video and first/last-frame), each mode a locked runtime, priced per second of video against the model maker's API.
 
@@ -6,20 +6,20 @@ Self-hosted video generation (MiniMax H3 text-to-video, reference-to-video and f
 
 | Measured result |
 |---|
-| **MiniMax H3 video factory on my own GPUs:** Text-to-video 27× below MiniMax's own H3 API per second of video |
+| **MiniMax H3 video factory on my own GPUs:** Text-to-video 48× below MiniMax's own H3 API per second of video |
 | **MiniMax H3 video factory on my own GPUs:** reference-to-video 5×–12× below |
 | **MiniMax H3 video factory on my own GPUs:** an 11,764-clip batch run |
-| **Per 10 s of video, MiniMax H3 on my own GPUs vs MiniMax's own H3 API:** text-to-video 27×, first/last-frame 33×, reference-to-video 5×–12× |
+| **Per 10 s of video, MiniMax H3 on my own GPUs vs MiniMax's own H3 API:** text-to-video 48×, first/last-frame 33×, reference-to-video 5×–12× |
 | **Local vs API cost arbitrage:** 15×–100× below Seedance 2 |
 | **images:** about $2–2.50 per 1,000 vs about $250 per 1,000 at default high quality |
-| **Self-hosted inference stack:** Video generation 27× below MiniMax's own H3 API on text-to-video, 50×–100× below Seedance 2 on text-to-video |
+| **Self-hosted inference stack:** Video generation 48× below MiniMax's own H3 API on text-to-video, 50×–100× below Seedance 2 on text-to-video |
 
 ## How it works
 
 ### MiniMax H3 video factory on my own GPUs
 
 - Modes: text-to-video, reference-to-video and first/last-frame video run as separate modes, each with its own locked workflow, settings and checks, chosen per shot.
-- Benchmarks, my own GPUs against MiniMax's own H3 API ($0.80 per 10 s at 768P, priced per second of output for every task type), per 10 s of video: text-to-video at 768×1344 with native audio $0.030 (about $0.009 a 3 s clip): 27× cheaper; first/last-frame at 480×864 $0.012: 33× below MiniMax at 480P; reference-to-video, the cheapest full pipeline (generate at 480p, finish to 1080p with SeedVR2) $0.09–0.10: 8×; native 544×960 with no upscale $0.064: 12×; native 768×1344 with 3 image references $0.17: about 5×. Against Seedance 2 at 720p ($1.50–3.03 per 10 s) the gap is 15× to 100×.
+- Benchmarks, my own GPUs against MiniMax's own H3 API ($0.80 per 10 s at 768P, priced per second of output for every task type), per 10 s of video: text-to-video at 768×1344 with native audio $0.017 (about $0.005 a 3 s clip, on 8-bit attention): 48× cheaper; first/last-frame at 480×864 $0.012: 33× below MiniMax at 480P; reference-to-video, the cheapest full pipeline (generate at 480p, finish to 1080p with SeedVR2) $0.09–0.10: 8×; native 544×960 with no upscale $0.064: 12×; native 768×1344 with 3 image references $0.17: about 5×. Against Seedance 2 at 720p ($1.50–3.03 per 10 s) the gap is 15× to 100×.
 - Cost split, reference-to-video: the 480p route is about $0.04–0.046 of H3 generation plus about $0.05–0.06 of SeedVR2 upscale on a 5090; the 544×960 route is $0.064 of generation plus $0.087 of upscale.
 - Quality trade-off: the 480p-plus-upscale route is the cheapest; generating at a higher native resolution often looks better for cinematic shots, for about 1.7× the cost.
 - LTX 2.3 on the same rented GPUs came in at about $0.006 a clip against Lightricks' own API at $0.03–0.04 a second at 720p (receipts on the archived VM).
@@ -33,7 +33,7 @@ Self-hosted video generation (MiniMax H3 text-to-video, reference-to-video and f
 
 - Motion video: local SCAIL vs Kling Motion Control 3 → ~17.5× cheaper.
 - Arbitrage inside the GPU market too: Vast was far cheaper at first, so most factories ran there; when GPU prices started rising and the gap narrowed, work moved to Verda where it fit better. Inside Vast, the broken slot machine was baked-image runtimes: a pinned image with the whole runtime inside cuts slow starts and broken boots, which is where the real cost of cheap hosts hides.
-- Benchmarks, my own GPUs against MiniMax's own H3 API ($0.80 per 10 s at 768P, priced per second of output for every task type), per 10 s of video: text-to-video at 768×1344 with native audio $0.030 (about $0.009 a 3 s clip): 27× cheaper; first/last-frame at 480×864 $0.012: 33× below MiniMax at 480P; reference-to-video, the cheapest full pipeline (generate at 480p, finish to 1080p with SeedVR2) $0.09–0.10: 8×; native 544×960 with no upscale $0.064: 12×; native 768×1344 with 3 image references $0.17: about 5×. Against Seedance 2 at 720p ($1.50–3.03 per 10 s) the gap is 15× to 100×.
+- Benchmarks, my own GPUs against MiniMax's own H3 API ($0.80 per 10 s at 768P, priced per second of output for every task type), per 10 s of video: text-to-video at 768×1344 with native audio $0.017 (about $0.005 a 3 s clip, on 8-bit attention): 48× cheaper; first/last-frame at 480×864 $0.012: 33× below MiniMax at 480P; reference-to-video, the cheapest full pipeline (generate at 480p, finish to 1080p with SeedVR2) $0.09–0.10: 8×; native 544×960 with no upscale $0.064: 12×; native 768×1344 with 3 image references $0.17: about 5×. Against Seedance 2 at 720p ($1.50–3.03 per 10 s) the gap is 15× to 100×.
 - Cost split, reference-to-video: the 480p route is about $0.04–0.046 of H3 generation plus about $0.05–0.06 of SeedVR2 upscale on a 5090; the 544×960 route is $0.064 of generation plus $0.087 of upscale.
 - Quality trade-off: the 480p-plus-upscale route is the cheapest; generating at a higher native resolution often looks better for cinematic shots, for about 1.7× the cost.
 - LTX 2.3 on the same rented GPUs came in at about $0.006 a clip against Lightricks' own API at $0.03–0.04 a second at 720p (receipts on the archived VM).
