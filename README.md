@@ -70,7 +70,7 @@ First-principles design of the most pertinent axes turns an open creative space 
 
 | Write-up | Result |
 |---|---|
-| [Organic content engine: one end-to-end engine over a Cartesian plane of hypotheses](engine/kp_content_engine.md) | k^p hypotheses, immutable packs |
+| [Darwin: a content engine that runs video like a science experiment](engine/darwin.md) | Viral breakouts to recipes to tested videos, one database, velocity tracking |
 | [Long-form video factory: 5 gated stages, one database row per video](engine/ready_longs.md) | 5 stages, 29 steps, 11,764-clip batches |
 | [Movie factory: a film as a gated graph](engine/movie_factory.md) | 193 gates, 34-node graph, 4 clean audits |
 | [QuantEditor: Markovian and goal-directed video editing, learned from top creators](engine/quanteditor.md) | 121 creator videos; Markovian + goal-directed |
